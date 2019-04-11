@@ -1,0 +1,76 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* colors*/
+:root {
+    --color-main: #65647D;
+    --color-highlight: #E20EA6;
+    --color-sea: #4BBEE2;
+    --color-dark: #131136;
+    --color-light: #D8D8D8;
+}
+
+/*text colors */
+.color-main {
+    color: var(--color-main);
+}
+.color-highlight {
+    color: var(--color-highlight);
+}
+.color-light {
+    color: var(--color-light);
+}
+
+body {
+    height: 100vh;
+    font-family: Comfortaa, sans-serif;
+    color: var(--color-dark);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Comfortaa;
+}
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.btn-primary {
+    background-color: var(--color-highlight);
+    border: none;
+}
+.btn-primary:hover {
+    background-color: var(--color-sea);
+    border: none;
+}
+
+/* graphics */
+.whale {
+    width: 30rem;
+    margin-bottom: -4rem;
+    margin-right: 5rem;
+    -webkit-animation: whale-anim 20s ease-in;
+    animation: whale-anim 50s ease-in;
+}
+.sea {
+    height: 4rem;
+    left: -40rem;
+    background: url('../img/img_sea.svg') repeat-x bottom;
+    opacity: 0.6;
+    -webkit-animation: sea-anim 10s;
+    animation: sea-anim 10s infinite linear;
+}
+@keyframes whale-anim {
+    10% {transform: rotate(5deg);}
+    25% {transform: rotate(-2deg);}
+    35% {transform: rotate(4deg);}
+    80% {transform: rotate(-5deg);}
+    to {margin-right: 30%; width: 40rem;}
+}
+@keyframes sea-anim {
+    from {margin-left: -100%;}
+    to {margin-left: -50%;}
+}
