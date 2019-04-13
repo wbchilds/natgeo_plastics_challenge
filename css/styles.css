@@ -40,12 +40,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 .btn {
     border-radius: 0.5rem;
-    padding: 0.5rem 4rem;
+    padding: 0.25rem 2rem;
 }
 .btn-empty {
     background-color: transparent;
     color: var(--color-highlight);
     border: solid var(--color-highlight);
+    min-width: 12rem;
 }
 .btn-empty:hover {
     background-color: var(--color-highlight);
@@ -61,16 +62,52 @@ h1, h2, h3, h4, h5, h6 {
     border: none;
 }
 
+.tooltip-1 {
+    position: relative;
+    display: inline-block;
+    border: none;
+}
+
+.tooltip-1 .tooltiptext {
+    visibility: hidden;
+    width: 12rem;
+    font-size: 0.8rem;
+    background-color: rgba(19, 17, 54, 0.91);
+    color: var(--color-light);
+    text-align: center;
+    border-radius: 6px;
+    padding: 0.5rem 0.25rem;
+    position: absolute;
+    z-index: 1;
+    top: 80%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip-1 .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgba(19, 17, 54, 0.91) transparent;
+}
+
+.tooltip-1:hover .tooltiptext {
+    visibility: visible;
+}
 /* graphics */
 .whale {
     width: 30rem;
-    margin-bottom: -10rem;
-    margin-right: -15rem;
+    margin-bottom: -9rem;
+    margin-right: -10rem;
     -webkit-animation: whale-anim 20s ease-in;
     animation: whale-anim 70s ease-in infinite;
 }
 .sea {
-    height: 5rem;
+    height: 7.5rem;
     left: -40rem;
     background: url('../img/img_sea.svg') repeat-x bottom;
     opacity: 0.8;
@@ -78,13 +115,50 @@ h1, h2, h3, h4, h5, h6 {
     animation: sea-anim 30s infinite linear;
 }
 @keyframes whale-anim {
-    10% {transform: rotate(10deg); margin-bottom: -8rem; margin-right: 10rem;}
-    25% {transform: rotate(-8deg); margin-bottom: -6rem; margin-right: 15rem;}
-    35% {transform: rotate(8deg); width: 35rem; margin-bottom: -10rem; margin-right: 20rem;}
-    80% {transform: rotate(-5deg); margin-bottom: -6rem; margin-right: 15rem;}
-    to {margin-right: 10rem; width: 30rem; transform: rotate(0deg); margin-bottom: -10rem;}
+    from {margin-bottom: -9rem; margin-right: -10rem;}
+    15% {transform: rotate(8deg); margin-bottom: -7.5rem; margin-right: 5rem;}
+    35% {transform: rotate(-6deg); margin-bottom: -8rem; margin-right: 15rem;}
+    65% {transform: rotate(4deg); margin-bottom: -7rem; width: 35rem; margin-right: 5rem;}
+    80% {transform: rotate(-5deg); margin-bottom: -8rem; margin-right: 0rem;}
+    to {transform: rotate(0deg); margin-bottom: -9rem; margin-right: -10rem; width: 30rem;}
 }
 @keyframes sea-anim {
     from {margin-left: -200%;}
+    10% {margin-bottom: -2rem;}
+    25% {margin-bottom: -1.5rem;}
+    40% {margin-bottom: -2.5rem;}
+    55% {margin-bottom: 0rem;}
+    70% {margin-bottom: -1.5rem;}
+    85% {margin-bottom: -0.5rem;}
     to {margin-left: 0%;}
+}
+
+.arrow-vertical-lg {
+    border-right: solid var(--color-sea) 0.15rem;
+    height: 80vh;
+    margin-right: 2%;
+    margin-top: 0;
+    vertical-align: bottom;
+    -webkit-animation: arrow-vertical-lg-anim 2s ease-out;
+    animation-iteration-count: 1;
+    z-index: -999;
+}
+@keyframes arrow-vertical-lg-anim {
+    from {height: 0; margin-top: 80vh; opacity: 0; alignment-baseline: bottom;}
+    90% {height: 0; margin-top: 80vh; opacity: 1;}
+    to {margin-top: 0; height: 80vh; opacity: 1;}
+}
+
+
+
+@media all and (max-width: 800px) {
+    .graph-1-birds {
+        max-width: 94%;
+    }
+    .graph-1-mammals {
+        max-width: 40%;
+    }
+    .graph-1-turtles {
+        max-width: 4%;
+    }
 }

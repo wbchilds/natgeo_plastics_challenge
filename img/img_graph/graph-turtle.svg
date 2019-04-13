@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="16px" viewBox="0 0 13 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>graph-turtle</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Story" transform="translate(-1329.000000, -175.000000)" fill="#C42C99">
+            <g id="graph-turtle" transform="translate(1329.000000, 175.000000)">
+                <path d="M8,0 L13,0 L13,16 L8,16 C3.581722,16 5.41083001e-16,12.418278 0,8 L0,8 C-5.41083001e-16,3.581722 3.581722,8.11624501e-16 8,0 Z" id="Rectangle-Copy-4"></path>
+            </g>
+        </g>
+    </g>
+</svg>
