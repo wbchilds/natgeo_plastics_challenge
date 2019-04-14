@@ -46,7 +46,6 @@ h1, h2, h3, h4, h5, h6 {
     background-color: transparent;
     color: var(--color-highlight);
     border: solid var(--color-highlight);
-    min-width: 12rem;
 }
 .btn-empty:hover {
     background-color: var(--color-highlight);
@@ -72,10 +71,10 @@ h1, h2, h3, h4, h5, h6 {
     visibility: hidden;
     width: 12rem;
     font-size: 0.8rem;
-    background-color: rgba(19, 17, 54, 0.91);
+    background-color: rgba(19, 17, 54, 0.85);
     color: var(--color-light);
     text-align: center;
-    border-radius: 6px;
+    border-radius: 1.5rem;
     padding: 0.5rem 0.25rem;
     position: absolute;
     z-index: 1;
@@ -98,6 +97,13 @@ h1, h2, h3, h4, h5, h6 {
 .tooltip-1:hover .tooltiptext {
     visibility: visible;
 }
+
+.card-border {
+    /*border: solid var(--color-light) 0.15rem;*/
+    border-radius: 1rem;
+    background: #4bbee22e;
+}
+
 /* graphics */
 .whale {
     width: 30rem;
@@ -105,6 +111,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: -10rem;
     -webkit-animation: whale-anim 20s ease-in;
     animation: whale-anim 70s ease-in infinite;
+    z-index: -200;
 }
 .sea {
     height: 7.5rem;
@@ -113,6 +120,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.8;
     -webkit-animation: sea-anim 10s;
     animation: sea-anim 30s infinite linear;
+    z-index: -100;
 }
 @keyframes whale-anim {
     from {margin-bottom: -9rem; margin-right: -10rem;}
@@ -135,21 +143,90 @@ h1, h2, h3, h4, h5, h6 {
 
 .arrow-vertical-lg {
     border-right: solid var(--color-sea) 0.15rem;
-    height: 80vh;
-    margin-right: 2%;
-    margin-top: 0;
+    height: 70vh;
+    margin-right: 1rem;
+    margin-top: 1.5rem;
     vertical-align: bottom;
     -webkit-animation: arrow-vertical-lg-anim 2s ease-out;
+    animation: arrow-vertical-lg-anim 2s ease-out;
     animation-iteration-count: 1;
     z-index: -999;
 }
+.arrow-vertical-lg::after {
+    content: "";
+    background-image: url(../img/circle-empty.svg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    transform: translateX(0.5rem);
+    width: 100%;
+    height: 99%;
+    display: inline-table;
+}
+.arrow-vertical-lg::before {
+    content: "";
+    border-bottom: solid var(--color-sea) 0.15rem;
+    width: 6%;
+    margin-right: 0;
+    margin-left: auto;
+    display: flex;
+    -webkit-animation: arrow-vertical-lg-hor-anim 2.2s ease-out;
+    animation: arrow-vertical-lg-hor-anim 2.2s ease-out;
+}
+
 @keyframes arrow-vertical-lg-anim {
     from {height: 0; margin-top: 80vh; opacity: 0; alignment-baseline: bottom;}
     90% {height: 0; margin-top: 80vh; opacity: 1;}
     to {margin-top: 0; height: 80vh; opacity: 1;}
 }
-
-
+@keyframes arrow-vertical-lg-hor-anim {
+    from {opacity: 0;}
+    90% {opacity: 0;}
+    to {opacity: 1;}
+}
+.appear-1st {
+    opacity: 1;
+    -webkit-animation: appear-1st-anim 3s linear;
+    animation: appear-1st-anim 3s linear;
+    animation-iteration-count: 1;
+}
+@keyframes appear-1st-anim {
+    from {width: 0; margin-left: 100%; opacity: 0;}
+    80% {width: 0; margin-left: 100%; opacity: 0;}
+    to {width: 100%; opacity: 1;}
+}
+.appear-2nd {
+    opacity: 1;
+    -webkit-animation: appear-2nd-anim 4.5s linear;
+    animation: appear-2nd-anim 4.5s linear;
+    animation-iteration-count: 1;
+}
+@keyframes appear-2nd-anim {
+    from {width: 0; height: 0; left: auto; right: 0; opacity: 0;}
+    75% {width: 0; height: 0; left: auto; right: 0; opacity: 0; }
+    to {width: 100%; height: auto; opacity: 1; left: auto; right: 0;}
+}
+.appear-3rd {
+    opacity: 1;
+    -webkit-animation: appear-3rd-anim 5s linear;
+    animation: appear-3rd-anim 5s linear;
+    animation-iteration-count: 1;
+}
+@keyframes appear-3rd-anim {
+    from {width: 0; left: auto; right: 0; opacity: 0;}
+    75% {width: 0; left: auto; right: 0; opacity: 0;}
+    to {width: 100%; opacity: 1;}
+}
+.appear-4th {
+    opacity: 1;
+    -webkit-animation: appear-4th-anim 5.5s linear;
+    animation: appear-4th-anim 5.5s linear;
+    animation-iteration-count: 1;
+}
+@keyframes appear-4th-anim {
+    from {width: 0; left: auto; right: 0; opacity: 0;}
+    75% {width: 0; left: auto; right: 0; opacity: 0;}
+    to {width: 100%; opacity: 1;}
+}
 
 @media all and (max-width: 800px) {
     .graph-1-birds {
@@ -160,5 +237,12 @@ h1, h2, h3, h4, h5, h6 {
     }
     .graph-1-turtles {
         max-width: 4%;
+    }
+    .ver-cent-push-dwn {
+        font-size: 1.8rem;
+        padding-top: 25%;
+    }
+    .fluid-padd-right {
+        padding-right: 1rem;
     }
 }
