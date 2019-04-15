@@ -3,7 +3,7 @@ var ctx = canvas.getContext("2d");
 var dx = 2;
 var dy = 1;
 var img = new Image;
-img.src = 'assets/plastic-bottle.svg'
+img.src = 'img/plastics_bottle_PETE1.svg'
 
 var mseconds = 0;
 var bottlequeue= []; 
@@ -31,7 +31,7 @@ function keyUpHandler(e) {
 
 function createBall() {
 	x = Math.random()*canvas.width
-	deg = (Math.random()-0.5)*90
+	deg = (Math.random()-0.5)*100
 	bottlequeue.push([x,0,deg])
 }
 function drawImageRot(img,x,y,width,height,deg){
@@ -54,7 +54,7 @@ function drawImageRot(img,x,y,width,height,deg){
 }
 
 function drawBall(bottle) {
-	drawImageRot(img,bottle[0],bottle[1],40,40,bottle[2])
+	drawImageRot(img,bottle[0],bottle[1],18,40,bottle[2])
 }
 
 function updateBalls() {

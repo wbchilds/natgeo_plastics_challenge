@@ -147,8 +147,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 1rem;
     margin-top: 1.5rem;
     vertical-align: bottom;
-    -webkit-animation: arrow-vertical-lg-anim 2s ease-out;
-    animation: arrow-vertical-lg-anim 2s ease-out;
+    -webkit-animation: arrow-vertical-lg-anim 2.5s ease-out;
+    animation: arrow-vertical-lg-anim 2.5s ease-out;
     animation-iteration-count: 1;
     z-index: -999;
 }
@@ -169,18 +169,18 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 0;
     margin-left: auto;
     display: flex;
-    -webkit-animation: arrow-vertical-lg-hor-anim 2.2s ease-out;
-    animation: arrow-vertical-lg-hor-anim 2.2s ease-out;
+    -webkit-animation: arrow-vertical-lg-hor-anim 3s ease-out;
+    animation: arrow-vertical-lg-hor-anim 3s ease-out;
 }
 
 @keyframes arrow-vertical-lg-anim {
     from {height: 0; margin-top: 80vh; opacity: 0; alignment-baseline: bottom;}
-    90% {height: 0; margin-top: 80vh; opacity: 1;}
+    60% {height: 0; margin-top: 80vh; opacity: 1;}
     to {margin-top: 0; height: 80vh; opacity: 1;}
 }
 @keyframes arrow-vertical-lg-hor-anim {
     from {opacity: 0;}
-    90% {opacity: 0;}
+    70% {opacity: 0;}
     to {opacity: 1;}
 }
 .appear-1st {
@@ -245,4 +245,67 @@ h1, h2, h3, h4, h5, h6 {
     .fluid-padd-right {
         padding-right: 1rem;
     }
+}
+@media all and (min-width: 1420px) {
+    .arrow-vertical-lg {
+        margin-right: 5%;
+    }
+}
+@media all and (min-width: 1800px) {
+    .arrow-vertical-lg::before {
+        width: 15%;
+    }
+}
+
+/* story-1 */
+.appear-sea {
+    -webkit-animation: appear-sea-anim 9s ease-in;
+    animation: appear-sea-anim 8s ease-in;
+}
+@keyframes appear-sea-anim {
+    from {margin-bottom: -10rem; }
+    65% {margin-bottom: -8rem; }
+    100% {margin-bottom: 0; }
+}
+.float {
+    -webkit-animation: float-anim infinite;
+    animation-delay: 4s;
+}
+@keyframes float-anim {
+    10% {transform: rotate(15deg);}
+    25% {transform: rotate(-5deg);}
+    40% {transform: rotate(10deg);}
+    75% {transform: rotate(-25deg);}
+    to {transform: rotate(30deg);}
+}
+.delay-1 {
+    margin-top: 89vh;
+    transform: rotate3d(2,4,1,20deg) ;
+    animation: delay-1-anim 9s ease-out;
+}
+@keyframes delay-1-anim {
+    from {transform: rotate3d(5,1,6,60deg); margin-top: -5rem; margin-right: 1rem;}
+    to {transform: rotate3d(2,4,1,20deg); margin-top: 89vh;}
+}
+.delay-2 {
+    margin-top: 95vh;
+    transform: rotate3d(-6,9,3,-25deg);
+    margin-right: 1rem;
+    animation: delay-2-anim 8.5s ease-out;
+}
+@keyframes delay-2-anim {
+    from {transform: rotate3d(1,6,2,10deg) ; margin-top: -10rem;}
+    15% {transform: rotate3d(1,6,2,10deg) ; margin-top: -10rem;}
+    to {transform: rotate3d(-6,9,3,-25deg) ; margin-top: 95vh; margin-right: 2rem;}
+}
+.delay-3 {
+    transform: rotate3d(7,10,2,25deg) ;
+    margin-right: 2rem;
+    margin-top: 93vh;
+    animation: delay-3-anim 9.5s ease-out;
+}
+@keyframes delay-3-anim {
+    from {transform: rotate3d(1,5,6,-25deg) ; margin-top: -7rem;}
+    20% {transform: rotate3d(1,5,6,-25deg) ; margin-top: -7rem;}
+    to {transform: rotate3d(7,2,2,25deg) ; margin-top: 93vh; margin-right: 1.5rem;}
 }

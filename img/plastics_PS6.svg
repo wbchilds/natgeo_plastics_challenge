@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96px" height="61px" viewBox="0 0 96 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>plastics_PS6</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.299934441">
+        <g id="Story-2-Copy" transform="translate(-906.000000, -880.000000)" fill="#F2D5EA" stroke="#E20EA6">
+            <g id="plastics_PS6" transform="translate(906.000000, 880.000000)">
+                <path d="M2.33562699,30 L93.9355595,30 L85.2385924,5.54657473 C84.1625214,2.52096571 81.2987793,0.5 78.0875118,0.5 L18.1836746,0.5 C14.9724072,0.5 12.108665,2.52096571 11.032594,5.54657473 L2.33562699,30 Z" id="Rectangle"></path>
+                <path d="M2.33562699,60.5 L93.9355595,60.5 L85.2385924,36.0465747 C84.1625214,33.0209657 81.2987793,31 78.0875118,31 L18.1836746,31 C14.9724072,31 12.108665,33.0209657 11.032594,36.0465747 L2.33562699,60.5 Z" id="Rectangle" transform="translate(48.135593, 45.750000) scale(1, -1) translate(-48.135593, -45.750000) "></path>
+                <rect id="Rectangle" x="0.5" y="28.8596491" width="95" height="3.28070175" rx="1.64035088"></rect>
+                <rect id="Rectangle-Copy" x="40.0932203" y="23.2412281" width="15.8135593" height="3.28070175" rx="1.64035088"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
