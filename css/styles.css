@@ -268,7 +268,8 @@ h1, h2, h3, h4, h5, h6 {
     100% {margin-bottom: 0; }
 }
 .float {
-    -webkit-animation: float-anim infinite;
+    -webkit-animation: float-anim 8s infinite;
+    animation: float-anim 8s infinite;;
     animation-delay: 4s;
 }
 @keyframes float-anim {
@@ -279,16 +280,16 @@ h1, h2, h3, h4, h5, h6 {
     to {transform: rotate(30deg);}
 }
 .delay-1 {
-    margin-top: 89vh;
-    transform: rotate3d(2,4,1,20deg) ;
+    margin-top: 91vh;
+    transform: rotate3d(2,4,1,20deg);
     animation: delay-1-anim 9s ease-out;
 }
 @keyframes delay-1-anim {
     from {transform: rotate3d(5,1,6,60deg); margin-top: -5rem; margin-right: 1rem;}
-    to {transform: rotate3d(2,4,1,20deg); margin-top: 89vh;}
+    to {transform: rotate3d(2,4,1,20deg); margin-top: 91vh;}
 }
 .delay-2 {
-    margin-top: 95vh;
+    margin-top: 90vh;
     transform: rotate3d(-6,9,3,-25deg);
     margin-right: 1rem;
     animation: delay-2-anim 8.5s ease-out;
@@ -296,7 +297,7 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes delay-2-anim {
     from {transform: rotate3d(1,6,2,10deg) ; margin-top: -10rem;}
     15% {transform: rotate3d(1,6,2,10deg) ; margin-top: -10rem;}
-    to {transform: rotate3d(-6,9,3,-25deg) ; margin-top: 95vh; margin-right: 2rem;}
+    to {transform: rotate3d(-6,9,3,-25deg) ; margin-top: 90vh; margin-right: 2rem;}
 }
 .delay-3 {
     transform: rotate3d(7,10,2,25deg) ;
