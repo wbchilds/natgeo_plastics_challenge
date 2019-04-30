@@ -3,14 +3,24 @@ html, body {
     margin: 0;
     padding: 0;
 }
-
+.background {
+    background-color: var(--color-light);
+    z-index: -999999;
+}
+.canvas-anim {
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
 /* colors*/
 :root {
     --color-main: #65647D;
-    --color-highlight: #E20EA6;
+    --color-highlight: #ffec03;
     --color-sea: #4BBEE2;
-    --color-dark: #131136;
-    --color-light: #D8D8D8;
+    --color-dark: #2a1169;
+    --color-light: #e8fbff;
 }
 
 /*text colors */
@@ -32,6 +42,10 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: Comfortaa;
 }
+a:hover {
+    color: var(--color-highlight);
+    text-decoration: none;
+}
 .vertical-center {
     min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
     min-height: 100vh;
@@ -41,6 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn {
     border-radius: 0.5rem;
     padding: 0.25rem 2rem;
+    font-weight: bold;
 }
 .btn-empty {
     background-color: transparent;
@@ -49,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .btn-empty:hover {
     background-color: var(--color-highlight);
-    color: #fff;
+    color: var(--color-dark);
     border: solid var(--color-highlight);
 }
 .btn-primary {
@@ -59,6 +74,27 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary:hover {
     background-color: var(--color-sea);
     border: none;
+}
+.btn-bubble {
+    border-bottom-right-radius: 0;
+    padding: 1rem 2rem;
+    top: 70vh;
+    bottom: 30vh;
+    margin: auto;
+    position: relative;
+    background-color: var(--color-sea);
+    z-index: 9;
+}
+.btn-bubble::after {
+    width: 0;
+    height: 0;
+    position: absolute;
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+    border-left: 0;
+    border-right: 1rem solid transparent;
+    border-bottom: 1rem solid var(--color-sea);
+    content: "";
 }
 
 .tooltip-1 {
@@ -104,31 +140,58 @@ h1, h2, h3, h4, h5, h6 {
     background: #4bbee22e;
 }
 
+.index-mid {
+    z-index: -10;
+}
+.index-front {
+    z-index: 10;
+}
+.index-back {
+    z-index: -40;
+}
+.opacity-high {
+    opacity: 0.8;
+}
+.opacity-mid {
+    opacity: 0.6;
+}
+.water-background {
+    height: 100vh;
+    padding-top: 25vh;
+    background: rgba(75,190,226,1);
+    background: -moz-linear-gradient(top, rgba(75,190,226,1) 0%, rgba(0,122,156,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(75,190,226,1)), color-stop(100%, rgba(0,122,156,1)));
+    background: -webkit-linear-gradient(top, rgba(75,190,226,1) 0%, rgba(0,122,156,1) 100%);
+    background: -o-linear-gradient(top, rgba(75,190,226,1) 0%, rgba(0,122,156,1) 100%);
+    background: -ms-linear-gradient(top, rgba(75,190,226,1) 0%, rgba(0,122,156,1) 100%);
+    background: linear-gradient(to bottom, rgba(75,190,226,1) 0%, rgba(0,122,156,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4bbee2', endColorstr='#007a9c', GradientType=0 );
+}
 /* graphics */
 .whale {
+    position: absolute;
     width: 30rem;
-    margin-bottom: -9rem;
-    margin-right: -10rem;
+    margin-top: 30rem;
+    margin-left: 90vw;
     -webkit-animation: whale-anim 20s ease-in;
-    animation: whale-anim 70s ease-in infinite;
+    animation: whale-anim 120s ease-in infinite;
     z-index: -200;
 }
 .sea {
-    height: 7.5rem;
+    height: 12rem;
     left: -40rem;
     background: url('../img/img_sea.svg') repeat-x bottom;
-    opacity: 0.8;
+    opacity: 1;
     -webkit-animation: sea-anim 10s;
     animation: sea-anim 30s infinite linear;
-    z-index: -100;
 }
 @keyframes whale-anim {
-    from {margin-bottom: -9rem; margin-right: -10rem;}
-    15% {transform: rotate(8deg); margin-bottom: -7.5rem; margin-right: 5rem;}
-    35% {transform: rotate(-6deg); margin-bottom: -8rem; margin-right: 15rem;}
-    65% {transform: rotate(4deg); margin-bottom: -7rem; width: 35rem; margin-right: 5rem;}
-    80% {transform: rotate(-5deg); margin-bottom: -8rem; margin-right: 0rem;}
-    to {transform: rotate(0deg); margin-bottom: -9rem; margin-right: -10rem; width: 30rem;}
+    from {margin-top: 30rem; margin-left: 90vw;}
+    15% {transform: rotate(8deg); margin-top: 12.5rem; margin-left: 15rem;}
+    35% {transform: rotate(-6deg); margin-bottom: -10rem; margin-right: 35rem;}
+    65% {transform: rotate(4deg); margin-bottom: -9rem; width: 35rem; margin-right: 15rem;}
+    80% {transform: rotate(-5deg); margin-bottom: -12rem; margin-right: 0rem;}
+    to {transform: rotate(0deg); margin-bottom: -30rem; margin-right: -10rem; width: 30rem;}
 }
 @keyframes sea-anim {
     from {margin-left: -200%;}
@@ -228,35 +291,6 @@ h1, h2, h3, h4, h5, h6 {
     to {width: 100%; opacity: 1;}
 }
 
-@media all and (max-width: 800px) {
-    .graph-1-birds {
-        max-width: 94%;
-    }
-    .graph-1-mammals {
-        max-width: 40%;
-    }
-    .graph-1-turtles {
-        max-width: 4%;
-    }
-    .ver-cent-push-dwn {
-        font-size: 1.8rem;
-        padding-top: 25%;
-    }
-    .fluid-padd-right {
-        padding-right: 1rem;
-    }
-}
-@media all and (min-width: 1420px) {
-    .arrow-vertical-lg {
-        margin-right: 5%;
-    }
-}
-@media all and (min-width: 1800px) {
-    .arrow-vertical-lg::before {
-        width: 15%;
-    }
-}
-
 /* story-1 */
 .appear-sea {
     -webkit-animation: appear-sea-anim 9s ease-in;
@@ -309,4 +343,54 @@ h1, h2, h3, h4, h5, h6 {
     from {transform: rotate3d(1,5,6,-25deg) ; margin-top: -7rem;}
     20% {transform: rotate3d(1,5,6,-25deg) ; margin-top: -7rem;}
     to {transform: rotate3d(7,2,2,25deg) ; margin-top: 93vh; margin-right: 1.5rem;}
+}
+.opacity-in {
+    animation: opacity-in-anim 2.5s linear;
+    animation-iteration-count: 1;
+    opacity: 1;
+}
+@keyframes opacity-in-anim {
+    from {opacity: 0;}
+    50% {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+
+@media all and (max-width: 800px) {
+    .graph-1-birds {
+        max-width: 94%;
+    }
+    .graph-1-mammals {
+        max-width: 40%;
+    }
+    .graph-1-turtles {
+        max-width: 4%;
+    }
+    .ver-cent-push-dwn {
+        font-size: 1.8rem;
+        padding-top: 25%;
+    }
+    .fluid-padd-right {
+        padding-right: 1rem;
+    }
+    .btn-bubble {
+        top: 62vh;
+        left: -7vw;
+        padding: 0.5rem;
+    }
+    .btn-bubble:after {
+        margin-left: 0.5rem;
+        margin-top: 1rem;
+    }
+}
+@media all and (min-width: 1420px) {
+    .arrow-vertical-lg {
+        margin-right: 5%;
+    }
+}
+@media all and (min-width: 1800px) {
+    .arrow-vertical-lg::before {
+        width: 15%;
+    }
 }
