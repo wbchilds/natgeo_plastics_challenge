@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>ic_circle_badge_1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Story-Copy" transform="translate(-1126.000000, -11.000000)">
+            <g id="ic_circle_badge_1" transform="translate(1127.000000, 12.000000)">
+                <path d="M12,25 C19.1797017,25 25,19.1797017 25,12 C25,4.82029825 19.1797017,-1 12,-1 C4.82029825,-1 -1,4.82029825 -1,12 C-1,19.1797017 4.82029825,25 12,25 Z M12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 Z" id="Oval" fill="#65647D" fill-rule="nonzero"></path>
+                <circle id="Oval" fill="#6B0EE2" cx="12" cy="12" r="9"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

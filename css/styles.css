@@ -18,9 +18,14 @@ html, body {
 :root {
     --color-main: #65647D;
     --color-highlight: #ffec03;
+    --color-contrast: #e41bab;
+    --color-contrast2: #6B0EE2;
     --color-sea: #4BBEE2;
     --color-dark: #2a1169;
     --color-light: #e8fbff;
+}
+.fixed-top {
+    z-index: unset;
 }
 
 /*text colors */
@@ -68,22 +73,33 @@ a:hover {
     border: solid var(--color-highlight);
 }
 .btn-primary {
-    background-color: var(--color-highlight);
+    background-color: var(--color-contrast);
     border: none;
 }
-.btn-primary:hover {
+.btn-primary:hover, btn-primary:active {
+    background-color: var(--color-contrast);
+    border: none;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
     background-color: var(--color-sea);
     border: none;
 }
 .btn-bubble {
     border-bottom-right-radius: 0;
     padding: 1rem 2rem;
-    top: 70vh;
-    bottom: 30vh;
-    margin: auto;
+    margin-bottom: 8vh;
+    margin-left: 50vw;
     position: relative;
-    background-color: var(--color-sea);
+    background-color: var(--color-contrast);
     z-index: 9;
+    transition: all .15s;
+}
+.btn-bubble:hover, btn-bubble:focus, btn-bubble:active {
+    background-color: var(--color-sea);
+    border: none;
+}
+.btn-bubble:hover::after, btn-bubble:focus::after, btn-bubble:active::after {
+    border-bottom: 1rem solid var(--color-sea);
 }
 .btn-bubble::after {
     width: 0;
@@ -93,17 +109,17 @@ a:hover {
     margin-top: 1.5rem;
     border-left: 0;
     border-right: 1rem solid transparent;
-    border-bottom: 1rem solid var(--color-sea);
+    border-bottom: 1rem solid var(--color-contrast);
     content: "";
+    transition: all .15s;
 }
 
-.tooltip-1 {
+.tooltip-right {
     position: relative;
-    display: inline-block;
     border: none;
 }
 
-.tooltip-1 .tooltiptext {
+.tooltip-right .tooltiptext {
     visibility: hidden;
     width: 12rem;
     font-size: 0.8rem;
@@ -114,23 +130,24 @@ a:hover {
     padding: 0.5rem 0.25rem;
     position: absolute;
     z-index: 1;
-    top: 80%;
-    left: 50%;
-    margin-left: -60px;
+    top: 150%;
+    right: 0;
+    margin: auto;
+    z-index: 999;
 }
 
-.tooltip-1 .tooltiptext::after {
+.tooltip-right .tooltiptext::after {
     content: "";
     position: absolute;
     bottom: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
+    right: 10%;
+    margin-left: -0.5rem;
+    border-width: 0.5rem;
     border-style: solid;
     border-color: transparent transparent rgba(19, 17, 54, 0.91) transparent;
 }
 
-.tooltip-1:hover .tooltiptext {
+.tooltip-right:hover .tooltiptext {
     visibility: visible;
 }
 
@@ -141,7 +158,7 @@ a:hover {
 }
 
 .index-mid {
-    z-index: -10;
+    z-index: 0;
 }
 .index-front {
     z-index: 10;
@@ -149,6 +166,11 @@ a:hover {
 .index-back {
     z-index: -40;
 }
+
+.badge-sm {
+    max-width: 1rem;
+}
+
 .opacity-high {
     opacity: 0.8;
 }
@@ -160,7 +182,6 @@ a:hover {
     padding-top: 25vh;
     background: rgba(75,190,226,1);
     background: -moz-linear-gradient(top, rgba(75,190,226,1) 0%, rgba(0,122,156,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(75,190,226,1)), color-stop(100%, rgba(0,122,156,1)));
     background: -webkit-linear-gradient(top, rgba(75,190,226,1) 0%, rgba(0,122,156,1) 100%);
     background: -o-linear-gradient(top, rgba(75,190,226,1) 0%, rgba(0,122,156,1) 100%);
     background: -ms-linear-gradient(top, rgba(75,190,226,1) 0%, rgba(0,122,156,1) 100%);
@@ -174,8 +195,16 @@ a:hover {
     margin-top: 30rem;
     margin-left: 90vw;
     -webkit-animation: whale-anim 20s ease-in;
-    animation: whale-anim 120s ease-in infinite;
-    z-index: -200;
+    animation: whale-anim 160s ease-in infinite;
+    z-index: 1;
+}
+.whale-img {
+    background-image: url(../img/whale-anim.gif);
+    width: 30vw;
+    height: 30vh;
+    opacity: 0.75;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .sea {
     height: 12rem;
@@ -205,15 +234,15 @@ a:hover {
 }
 
 .arrow-vertical-lg {
-    border-right: solid var(--color-sea) 0.15rem;
-    height: 70vh;
+    border-right: solid var(--color-contrast) 0.15rem;
+    height: 42vh;
     margin-right: 1rem;
     margin-top: 1.5rem;
     vertical-align: bottom;
     -webkit-animation: arrow-vertical-lg-anim 2.5s ease-out;
     animation: arrow-vertical-lg-anim 2.5s ease-out;
     animation-iteration-count: 1;
-    z-index: -999;
+    z-index: 1;
 }
 .arrow-vertical-lg::after {
     content: "";
@@ -227,7 +256,7 @@ a:hover {
 }
 .arrow-vertical-lg::before {
     content: "";
-    border-bottom: solid var(--color-sea) 0.15rem;
+    border-bottom: solid var(--color-contrast) 0.15rem;
     width: 6%;
     margin-right: 0;
     margin-left: auto;
@@ -237,14 +266,14 @@ a:hover {
 }
 
 @keyframes arrow-vertical-lg-anim {
-    from {height: 0; margin-top: 80vh; opacity: 0; alignment-baseline: bottom;}
-    60% {height: 0; margin-top: 80vh; opacity: 1;}
-    to {margin-top: 0; height: 80vh; opacity: 1;}
+    from {height: 0; margin-top: 42vh; opacity: 0; alignment-baseline: bottom;}
+    60% {height: 0; margin-top: 42vh; opacity: 1;}
+    to {height: 42vh; margin-top: 2vh; opacity: 1;}
 }
 @keyframes arrow-vertical-lg-hor-anim {
-    from {opacity: 0;}
-    70% {opacity: 0;}
-    to {opacity: 1;}
+    from {opacity: 0; width: 0;}
+    70% {opacity: 0; width: 0;}
+    to {opacity: 1; width: 6%;}
 }
 .appear-1st {
     opacity: 1;
@@ -257,7 +286,7 @@ a:hover {
     80% {width: 0; margin-left: 100%; opacity: 0;}
     to {width: 100%; opacity: 1;}
 }
-.appear-2nd {
+.birds-transition-in {
     opacity: 1;
     -webkit-animation: appear-2nd-anim 4.5s linear;
     animation: appear-2nd-anim 4.5s linear;
@@ -268,7 +297,7 @@ a:hover {
     75% {width: 0; height: 0; left: auto; right: 0; opacity: 0; }
     to {width: 100%; height: auto; opacity: 1; left: auto; right: 0;}
 }
-.appear-3rd {
+.mammals-transition-in {
     opacity: 1;
     -webkit-animation: appear-3rd-anim 5s linear;
     animation: appear-3rd-anim 5s linear;
@@ -279,7 +308,7 @@ a:hover {
     75% {width: 0; left: auto; right: 0; opacity: 0;}
     to {width: 100%; opacity: 1;}
 }
-.appear-4th {
+.turtles-transition-in {
     opacity: 1;
     -webkit-animation: appear-4th-anim 5.5s linear;
     animation: appear-4th-anim 5.5s linear;
@@ -345,13 +374,13 @@ a:hover {
     to {transform: rotate3d(7,2,2,25deg) ; margin-top: 93vh; margin-right: 1.5rem;}
 }
 .opacity-in {
-    animation: opacity-in-anim 2.5s linear;
+    animation: opacity-in-anim 3s linear;
     animation-iteration-count: 1;
     opacity: 1;
 }
 @keyframes opacity-in-anim {
     from {opacity: 0;}
-    50% {opacity: 0;}
+    70% {opacity: 0;}
     to {opacity: 1;}
 }
 
@@ -368,7 +397,7 @@ a:hover {
         max-width: 4%;
     }
     .ver-cent-push-dwn {
-        font-size: 1.8rem;
+        font-size: 1.2rem;
         padding-top: 25%;
     }
     .fluid-padd-right {
@@ -393,4 +422,57 @@ a:hover {
     .arrow-vertical-lg::before {
         width: 15%;
     }
+}
+
+
+/* intro pages */
+
+.body-frame {
+    background-color: #4bbee29c;
+    height: 100%;
+}
+.intro-btn-align {
+    bottom: 0;
+    margin: auto;
+}
+.intro-canvas {
+    background-color: var(--color-light);
+}
+
+/* graph elements for start-page */
+.whale .badges {
+    position: absolute;
+    top: 8%;
+    left: 10%;
+}
+
+.badge-anim {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.random-margin-1 {
+    margin-top: 1vh;
+}
+.random-margin-2 {
+    margin-top: 2vh;
+}
+.random-margin-3 {
+    margin-top: 3vh;
+}
+.random-margin-4 {
+    margin-top: 4vh;
+}
+.random-margin-5 {
+    margin-top: 5vh;
+}
+.random-margin-6 {
+    margin-top: 6vh;
+}
+.random-margin-7 {
+    margin-top: 7vh;
+}
+.random-margin-8 {
+    margin-top: 8vh;
 }
