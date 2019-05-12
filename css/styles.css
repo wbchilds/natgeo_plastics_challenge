@@ -114,12 +114,13 @@ a:hover {
     transition: all .15s;
 }
 
-.tooltip-right {
+.tooltip {
     position: relative;
     border: none;
+    opacity: 1;
 }
 
-.tooltip-right .tooltiptext {
+.tooltip .tooltiptext {
     visibility: hidden;
     width: 12rem;
     font-size: 0.8rem;
@@ -136,7 +137,7 @@ a:hover {
     z-index: 999;
 }
 
-.tooltip-right .tooltiptext::after {
+.tooltip .tooltiptext::after {
     content: "";
     position: absolute;
     bottom: 100%;
@@ -147,7 +148,7 @@ a:hover {
     border-color: transparent transparent rgba(19, 17, 54, 0.91) transparent;
 }
 
-.tooltip-right:hover .tooltiptext {
+.tooltip:hover .tooltiptext {
     visibility: visible;
 }
 
@@ -170,6 +171,15 @@ a:hover {
 .badge-sm {
     max-width: 1rem;
 }
+.label {
+    font-size: 0.8rem;
+    background: url("../img/bubble-background.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0.2rem 0.2rem 0.2rem 1rem;
+    opacity: 0.6;
+}
 
 .opacity-high {
     opacity: 0.8;
@@ -189,14 +199,55 @@ a:hover {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4bbee2', endColorstr='#007a9c', GradientType=0 );
 }
 /* graphics */
+.bird {
+    position: absolute;
+    width: 19rem;
+    margin-top: 2rem;
+    margin-left: 1vw;
+    z-index: 2;
+}
+.bird-img {
+    background-image: url(../img/ic_bird.svg);
+    width: 10vw;
+    height: 10vh;
+    opacity: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.turtle {
+    position: absolute;
+    width: 19rem;
+    margin-top: 5rem;
+    margin-left: 25vw;
+    z-index: 2;
+    -webkit-animation: turtle-anim 140s ease-in infinite;
+    animation: turtle-anim 140s ease-in infinite;
+}
+@keyframes turtle-anim {
+    from {width: 19rem; margin-top: 5rem; margin-left: 25vw;}
+    15% {transform: rotate(8deg); width: 19rem; margin-top: 3rem; margin-left: 55vw;}
+    35% {transform: rotate(-6deg); width: 19rem; margin-top: 4rem; margin-left: 30vw;}
+    65% {transform: rotate(4deg); width: 19rem; margin-top: 2rem; margin-left: 75vw;}
+    80% {transform: rotate(-5deg); width: 19rem; margin-top: 3rem; margin-left: 90vw;}
+    to {transform: rotate(0deg); width: 19rem; margin-top: 5rem; margin-left: 25vw;}
+}
+.turtle-img {
+    background-image: url(../img/ic_turtle.svg);
+    width: 10vw;
+    height: 10vh;
+    opacity: 0.75;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .whale {
     position: absolute;
     width: 30rem;
     margin-top: 30rem;
     margin-left: 90vw;
+    z-index: 1;
     -webkit-animation: whale-anim 20s ease-in;
     animation: whale-anim 160s ease-in infinite;
-    z-index: 1;
 }
 .whale-img {
     background-image: url(../img/whale-anim.gif);
@@ -220,7 +271,7 @@ a:hover {
     35% {transform: rotate(-6deg); margin-bottom: -10rem; margin-right: 35rem;}
     65% {transform: rotate(4deg); margin-bottom: -9rem; width: 35rem; margin-right: 15rem;}
     80% {transform: rotate(-5deg); margin-bottom: -12rem; margin-right: 0rem;}
-    to {transform: rotate(0deg); margin-bottom: -30rem; margin-right: -10rem; width: 30rem;}
+    to {transform: rotate(0deg); margin-bottom: -10rem; margin-right: -10rem; width: 30rem;}
 }
 @keyframes sea-anim {
     from {margin-left: -200%;}
@@ -292,11 +343,6 @@ a:hover {
     animation: appear-2nd-anim 4.5s linear;
     animation-iteration-count: 1;
 }
-@keyframes appear-2nd-anim {
-    from {width: 0; height: 0; left: auto; right: 0; opacity: 0;}
-    75% {width: 0; height: 0; left: auto; right: 0; opacity: 0; }
-    to {width: 100%; height: auto; opacity: 1; left: auto; right: 0;}
-}
 .mammals-transition-in {
     opacity: 1;
     -webkit-animation: appear-3rd-anim 5s linear;
@@ -307,12 +353,6 @@ a:hover {
     from {width: 0; left: auto; right: 0; opacity: 0;}
     75% {width: 0; left: auto; right: 0; opacity: 0;}
     to {width: 100%; opacity: 1;}
-}
-.turtles-transition-in {
-    opacity: 1;
-    -webkit-animation: appear-4th-anim 5.5s linear;
-    animation: appear-4th-anim 5.5s linear;
-    animation-iteration-count: 1;
 }
 @keyframes appear-4th-anim {
     from {width: 0; left: auto; right: 0; opacity: 0;}
@@ -387,15 +427,6 @@ a:hover {
 
 
 @media all and (max-width: 800px) {
-    .graph-1-birds {
-        max-width: 94%;
-    }
-    .graph-1-mammals {
-        max-width: 40%;
-    }
-    .graph-1-turtles {
-        max-width: 4%;
-    }
     .ver-cent-push-dwn {
         font-size: 1.2rem;
         padding-top: 25%;
@@ -440,10 +471,13 @@ a:hover {
 }
 
 /* graph elements for start-page */
-.whale .badges {
-    position: absolute;
-    top: 8%;
-    left: 10%;
+.whale .badges, .turtle .badges {
+    position: initial;
+    top: 0;
+    left: 0;
+}
+.bird .badges {
+    margin-top: -5rem;
 }
 
 .badge-anim {
