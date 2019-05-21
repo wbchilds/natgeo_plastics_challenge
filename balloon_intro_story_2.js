@@ -2417,7 +2417,7 @@ p.frameBounds = [rect, new cjs.Rectangle(7.9,0,185.2,317.8), new cjs.Rectangle(8
 	this.frame_943 = function() {
 		this.stop();
 		var _this = this;
-		window.open('start-page.html', '_self');
+		window.open('problem-landingpage.html', '_self');
 	}
 
 	// actions tween:
