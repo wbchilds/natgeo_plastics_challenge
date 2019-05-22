@@ -484,6 +484,17 @@ a:hover {
     }
 }
 
+/* counting page */
+.bluewhale {
+    width: 2rem;
+}
+.monster-sm {
+    width: 0.75rem;
+    margin: 0 0.15rem;
+}
+#repeat100, #repeat100B {
+    max-width: 22rem;
+}
 
 /* intro pages */
 

@@ -11,7 +11,7 @@
     <title>The plastic game is fun but it's not</title>
 </head>
 <body>
-    <div class="container-fluid position-fixed">
+    <div class="container-fluid position-fixed index-back">
         <div class="d-flex justify-content-around">
             <div class="delay-3">
             <img src="img/plastics_bottle_PETE1.svg" class="img-fluid float" alt="plastic types PETE 1">
@@ -39,17 +39,66 @@
 
 <div class="vertical-center">
     <div class="container">
+<div class="">
+    <div class="text-center">
+        <p class="pt-5">
+            The blue whale is the largest animal that we know has ever lived on Earth,<br>
+            it can weigh even 150 tonnes when feeding. Let’s say we have a huge whale that weighs 100 tonnes…
+        </p>
+        <h3 class="color-highlight"><img src="img/ic_bluewhale.svg"> = 100 T</h3>
+        <p>Now imagine a huge monster equivalent to 100 of those whales</p>
+        <div class="row justify-content-center align-items-center">
+            <div id="repeat100">
+                <img src="img/ic_bluewhale.svg" class="bluewhale-sm monster-sm">
+            </div>
+                <h3 class="color-highlight"> = <img src="img/ic_bigmonster.svg"> = 10,000 T</h3>
+        </div>
+        <h5 class="pt-4">We're not done yet!</h5>
+        <p>Now imagine a new monster that's even 100 times bigger in weight than our last huge monster!!!</p>
+        <div class="row justify-content-center align-items-center">
+            <div id="repeat100B">
+                <img src="img/ic_bigmonster.svg" class="bigmonster-sm monster-sm">
+            </div>
+            <h3 class="color-highlight"> = <img src="img/ic_hugemonster.svg"> = 1,000,000 T</h3>
+        </div>
+        <h5 class="pt-4">O.K. Now we're ready!</h5>
+        <hr>
+        <a href="#repeat41" class="text-center"><img src="img/arrow-down.svg"></a>
+        <h4 class="my-5">Here's plastic production on one single day</h4>
+    </div>
+</div>
         <div class="row justify-content-center">
-            <div class="col-sm-10 col-md-6 text-center">
-                <h2 class="ver-cent-push-dwn font-weight-bold">Plastic has been around for public consumption only since early 1950’s</h2>
+            <div class="col text-center">
+                <h2 class="ver-cent-push-dwn font-weight-bold">1950</h2>
+                <p>4,100 T</p>
+                <div id="repeat41">
+                    <img src="img/ic_bluewhale.svg" class="bluewhale">
+                </div>
+            </div>
+            <div class="col text-center">
+                <h2 class="ver-cent-push-dwn font-weight-bold">TODAY</h2>
+                <p>820,000 T</p>
+                <div id="repeat82">
+                    <img src="img/ic_bigmonster.svg" class="bigmonster">
+                </div>
+            </div>
+            <div class="col text-center">
+                <h2 class="ver-cent-push-dwn font-weight-bold">by 2050</h2>
+                <p>90,400,000 T</p>
+                <div id="repeat90">
+                    <img src="img/ic_hugemonster.svg" class="hugemonster">
+                </div>
+                <div id="repeat40">
+                    <img src="img/ic_bigmonster.svg" class="bigmonster">
+                </div>
             </div>
         </div>
-        <div class="row justify-content-center my-2">
-            <div class="col text-center">
-                <h2>30%</h2>
-                <p>of the plastic produced ends up in our oceans</p>
-                <p><small></small></p>
-            </div>
+        <div class="text-center my-5">
+            <h4>...and of all these, 30% ends up in our oceans.</h4>
+        </div>
+        <hr>
+        <div class="text-center">
+        <a href="#repeat41" class="text-center"><img src="img/arrow-down.svg"></a>
         </div>
         <div class="row justify-content-center my-4">
             <div class="col text-center">
@@ -71,7 +120,7 @@
     </div>
 </div>
 
-<div class="fixed-bottom appear-sea">
+<div class="fixed-bottom appear-sea index-back">
     <div class="sea"></div>
 </div>
 
@@ -79,5 +128,26 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+
+    <script>
+            for (var i = 1; i < 100; i++) {
+                $('#repeat100').append($('.bluewhale-sm').last().clone(true));
+            }
+            for (var i = 1; i < 100; i++) {
+                $('#repeat100B').append($('.bigmonster-sm').last().clone(true));
+            }
+            for (var i = 1; i < 41; i++) {
+                $('#repeat41').append($('.bluewhale').last().clone(true));
+            }
+            for (var i = 1; i < 82; i++) {
+                $('#repeat82').append($('.bigmonster').last().clone(true));
+            }
+            for (var i = 1; i < 90; i++) {
+                $('#repeat90').append($('.hugemonster').last().clone(true));
+            }
+            for (var i = 1; i < 40; i++) {
+                $('#repeat40').append($('.bigmonster').last().clone(true));
+            }
+    </script>
 </body>
 </html>
