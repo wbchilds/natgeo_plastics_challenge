@@ -4,14 +4,16 @@ var dx = 2;
 var dy = 1;
 var rightPressed = false;
 var leftPressed = false;
-var paddleHeight = 10;
-var paddleWidth = 75;
+var paddleHeight = 24;
+var paddleWidth = 24;
 var paddleX = (canvas.width-paddleWidth) /2;
 var bottlecount = 0;
 var bottlescaught = 0;
 var bottleids = 0;
-var img = new Image;
-img.src = 'img/plastics_bottle_PETE1.svg'
+var imgBottle = new Image;
+imgBottle.src = 'img/plastics_bottle_PETE1.svg'
+var imgBin = new Image(4,32);
+imgBin.src = 'img/ic_recycling_bin.svg';
 
 var mseconds = 0;
 var bottlequeue= []; 
@@ -45,12 +47,8 @@ function createBottle() {
     bottleids += 1;
 }
 
-function drawPaddle() {
-    ctx.beginPath();
-    ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
+function drawPaddle(img,x,y,width,height) {
+    ctx.drawImage(imgBin,paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
 }
 
 function drawImageRot(img,x,y,width,height,deg){
@@ -65,7 +63,7 @@ function drawImageRot(img,x,y,width,height,deg){
     ctx.rotate(rad);
 
     //draw the image    
-    ctx.drawImage(img,width / 2 * (-1),height / 2 * (-1),width,height);
+    ctx.drawImage(imgBottle,width / 2 * (-1),height / 2 * (-1),width,height);
 
     //reset the canvas  
     ctx.rotate(rad * ( -1 ) );
@@ -73,7 +71,7 @@ function drawImageRot(img,x,y,width,height,deg){
 }
 
 function drawBottle(bottle) {
-	drawImageRot(img,bottle[0],bottle[1],18,40,bottle[2])
+	drawImageRot(imgBottle,bottle[0],bottle[1],10,24,bottle[2])
 }
 
 function updateBottles() {

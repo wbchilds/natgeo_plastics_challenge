@@ -7,6 +7,9 @@ html, body {
     background-color: var(--color-light);
     z-index: -999999;
 }
+.container-narrow {
+    max-width: 42rem;
+}
 .canvas-anim {
     margin: auto;
     top: 0;
@@ -47,8 +50,14 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: Comfortaa;
 }
+a {
+    background: transparent;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
 a:hover {
     color: var(--color-highlight);
+    background: var(--color-light);
     text-decoration: none;
 }
 .vertical-center {
@@ -63,9 +72,9 @@ a:hover {
     font-weight: bold;
 }
 .btn-empty {
-    background-color: transparent;
-    color: var(--color-highlight);
-    border: solid var(--color-highlight);
+    background-color: #ffffff40;
+    color: var(--color-dark);
+    border: solid var(--color-dark);
 }
 .btn-empty:hover {
     background-color: var(--color-highlight);
@@ -73,7 +82,7 @@ a:hover {
     border: solid var(--color-highlight);
 }
 .btn-primary {
-    background-color: var(--color-contrast);
+    background-color: var(--color-highlight);
     border: none;
 }
 .btn-primary:hover, btn-primary:active {
@@ -84,21 +93,23 @@ a:hover {
     background-color: var(--color-sea);
     border: none;
 }
+.bubble-intro {
+    margin-left: 50vw;
+    margin-bottom: 8vh;
+}
 .btn-bubble {
     border-bottom-right-radius: 0;
     padding: 1rem 2rem;
-    margin-bottom: 8vh;
-    margin-left: 50vw;
     position: relative;
     background-color: var(--color-highlight);
     z-index: 9;
     transition: all .15s;
 }
-.btn-bubble:hover, btn-bubble:focus, btn-bubble:active {
+.btn-bubble:hover, .btn-bubble:focus, .btn-bubble:active, .btn-bubble:visited {
     background-color: var(--color-sea);
     border: none;
 }
-.btn-bubble:hover::after, btn-bubble:focus::after, btn-bubble:active::after {
+.btn-bubble:hover::after, .btn-bubble:focus::after, .btn-bubble:active::after, .btn-bubble:visited::after {
     border-bottom: 1rem solid var(--color-sea);
 }
 .btn-bubble::after {
@@ -227,6 +238,14 @@ a:hover {
     background: linear-gradient(to bottom, rgba(75,190,226,1) 0%, rgba(0,122,156,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4bbee2', endColorstr='#007a9c', GradientType=0 );
 }
+
+.ic-lg {
+    width: 10rem;
+}
+.ic-sm {
+    max-width: 2rem;
+    max-height: 2rem;
+}
 /* graphics */
 .bird {
     position: absolute;
@@ -271,12 +290,12 @@ a:hover {
 
 .whale {
     position: absolute;
-    width: 30rem;
+    width: 35rem;
     margin-top: 30rem;
     margin-left: 80vw;
     z-index: 1;
-    -webkit-animation: whale-anim 160s ease-in infinite;
-    animation: whale-anim 160s ease-in infinite;
+    -webkit-animation: whale-anim 140s ease-in infinite;
+    animation: whale-anim 140s ease-in infinite;
 }
 .whale-img {
     background-image: url(../img/whale-anim.gif);
@@ -295,12 +314,12 @@ a:hover {
     animation: sea-anim 30s infinite linear;
 }
 @keyframes whale-anim {
-    from {margin-top: 30rem; margin-left: 80vw;}
-    15% {transform: rotate(8deg); margin-top: 25rem; margin-left: 65vw;}
-    35% {transform: rotate(-6deg); margin-top: 28rem; margin-left: 45vw;}
-    65% {transform: rotate(4deg); margin-top: 22rem; width: 35rem; margin-left: 25vw;}
-    80% {transform: rotate(-5deg); margin-top: 24rem; margin-left: 30vw;}
-    95% {transform: rotate(0deg); margin-top: 29rem; margin-left: 75vw; width: 30rem;}
+    from {margin-top: 35rem; margin-left: 80vw;}
+    15% {transform: rotate(8deg); margin-top: 28rem; margin-left: 65vw;}
+    35% {transform: rotate(-6deg); margin-top: 32rem; margin-left: 45vw;}
+    65% {transform: rotate(4deg); margin-top: 26rem; width: 35rem; margin-left: 25vw;}
+    80% {transform: rotate(-5deg); margin-top: 34rem; margin-left: 30vw;}
+    95% {transform: rotate(0deg); margin-top: 30rem; margin-left: 75vw; width: 30rem;}
 }
 @keyframes sea-anim {
     from {margin-left: -200%;}
@@ -452,6 +471,33 @@ a:hover {
     70% {opacity: 0;}
     to {opacity: 1;}
 }
+.production-anim {
+    -webkit-animation: plastic-prod-horiz 20s infinite;
+    animation: plastic-prod-horiz 5s infinite;
+}
+@keyframes plastic-prod-horiz {
+    from {margin-right: 0; margin-left: -50vw; opacity: 1;}
+    99.999% {margin-right: -100vw; margin-left: 100vw; opacity: 1;}
+    to {margin-right:0; margin-left: -50vw; opacity: 1;}
+}
+
+#infoProd2{
+    transition: all 2s;
+}
+.info-prod-show {
+    display: block;
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    transition: all 2s ease;
+}
+.info-prod-hide {
+    display: none;
+    -webkit-transform: translate(0, -20%);
+    transform: translate(0, -20%);
+    opacity: 0;
+    transition: all 2s ease;
+}
 
 
 
@@ -464,9 +510,11 @@ a:hover {
         padding-right: 1rem;
     }
     .btn-bubble {
+        padding: 0.5rem;
+    }
+    .bubble-intro {
         top: 62vh;
         left: -7vw;
-        padding: 0.5rem;
     }
     .btn-bubble:after {
         margin-left: 0.5rem;
@@ -489,11 +537,11 @@ a:hover {
     width: 2rem;
 }
 .monster-sm {
-    width: 0.75rem;
-    margin: 0 0.15rem;
+    width: 0.8rem;
+    margin: 0 0.1rem;
 }
 #repeat100, #repeat100B {
-    max-width: 22rem;
+    max-width: 15rem;
 }
 
 /* intro pages */
@@ -549,4 +597,10 @@ a:hover {
 }
 .random-margin-8 {
     margin-top: 4.5vh;
+}
+
+/* bottle canvas */
+canvas#intro_canvas {
+    width: 100vw;
+    height: 85vh;
 }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+    <title>ic_recycling_bin</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ic_recycling_bin" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M48,28 C48,12.536027 37.254834,0 24,0 C10.745166,0 0,12.536027 0,28 C14.5,28 33.5,28 48,28 Z" id="Oval" fill="#65647D" transform="translate(24.000000, 14.000000) rotate(-180.000000) translate(-24.000000, -14.000000) "></path>
+        <path d="M34,34 L48,34 L48,48 L18,48 C16.8954305,48 16,47.1045695 16,46 L16,18 L32,18 L32,32 C32,33.1045695 32.8954305,34 34,34 Z" id="Path" fill="#65647D"></path>
+        <g id="ic_recycling" transform="translate(12.000000, 2.000000)">
+            <g id="Group-6" transform="translate(8.477612, 0.000000)">
+                <polygon id="Rectangle" fill="#BBB7B7" transform="translate(3.063952, 4.525537) rotate(-330.000000) translate(-3.063952, -4.525537) " points="1.39268765 3.25283955 4.73521732 1.32302915 4.66209574 7.72804484 1.39292607 7.70666115"></polygon>
+                <path d="M4.3845482,6.77332031 L4.22330908,1.1020691 L7.56583876,3.05573706 L7.5604015,6.77332031 L9.19554173,6.77332031 L5.97652772,10.0321298 L2.75751371,6.77332031 L4.3845482,6.77332031 Z" id="Combined-Shape" fill="#D8D8D8" transform="translate(5.976528, 5.567099) rotate(-30.000000) translate(-5.976528, -5.567099) "></path>
+            </g>
+            <g id="Group-6-Copy" transform="translate(16.477612, 14.384615) rotate(-240.000000) translate(-16.477612, -14.384615) translate(10.985075, 8.824176)">
+                <polygon id="Rectangle" fill="#BBB7B7" transform="translate(3.063952, 4.525537) rotate(-330.000000) translate(-3.063952, -4.525537) " points="1.39268765 3.25283955 4.73521732 1.32302915 4.66209574 7.72804484 1.39292607 7.70666115"></polygon>
+                <path d="M4.3845482,6.77332031 L4.22330908,1.1020691 L7.56583876,3.05573706 L7.5604015,6.77332031 L9.19554173,6.77332031 L5.97652772,10.0321298 L2.75751371,6.77332031 L4.3845482,6.77332031 Z" id="Combined-Shape" fill="#D8D8D8" transform="translate(5.976528, 5.567099) rotate(-30.000000) translate(-5.976528, -5.567099) "></path>
+            </g>
+            <g id="Group-6-Copy-2" transform="translate(7.522388, 12.087912) rotate(-120.000000) translate(-7.522388, -12.087912) translate(2.029851, 6.527473)">
+                <polygon id="Rectangle" fill="#BBB7B7" transform="translate(3.063952, 4.525537) rotate(-330.000000) translate(-3.063952, -4.525537) " points="1.39268765 3.25283955 4.73521732 1.32302915 4.66209574 7.72804484 1.39292607 7.70666115"></polygon>
+                <path d="M4.3845482,6.77332031 L4.22330908,1.1020691 L7.56583876,3.05573706 L7.5604015,6.77332031 L9.19554173,6.77332031 L5.97652772,10.0321298 L2.75751371,6.77332031 L4.3845482,6.77332031 Z" id="Combined-Shape" fill="#D8D8D8" transform="translate(5.976528, 5.567099) rotate(-30.000000) translate(-5.976528, -5.567099) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
