@@ -52,13 +52,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 a {
     background: transparent;
-    padding: 0.5rem;
-    border-radius: 1rem;
 }
 a:hover {
     color: var(--color-highlight);
-    background: var(--color-light);
     text-decoration: none;
+}
+.btn-secondary {
+    background: transparent;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+.btn-secondary:hover {
+    color: var(--color-highlight);
+    background: var(--color-light);
 }
 .vertical-center {
     min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
@@ -309,7 +315,6 @@ a:hover {
     height: 15rem;
     left: -40rem;
     background: url('../img/img_sea.svg') repeat-x bottom;
-    opacity: 0.9;
     -webkit-animation: sea-anim 10s;
     animation: sea-anim 30s infinite linear;
 }
