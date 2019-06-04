@@ -309,7 +309,7 @@ a:hover {
     height: 15rem;
     left: -40rem;
     background: url('../img/img_sea.svg') repeat-x bottom;
-    opacity: 1;
+    opacity: 0.9;
     -webkit-animation: sea-anim 10s;
     animation: sea-anim 30s infinite linear;
 }

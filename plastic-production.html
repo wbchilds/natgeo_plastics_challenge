@@ -51,7 +51,7 @@
             </div>
             <div class="row">
                 <div class="col text-center py-4">
-                    <a href="#" class="btn btn-bubble btn-primary" id="toggleProd2">O.K. I get it's big</a>
+                    <a href="#scroll2" class="btn btn-bubble btn-primary" id="toggleProd2">O.K. I get it's big</a>
                 </div>
             </div>
         </div>
@@ -70,10 +70,12 @@
             </div>
             <div class="row">
                 <div class="col text-center py-4">
-                    <a href="#" class="btn btn-bubble btn-primary" id="toggleProd3">Are we done yet?</a>
+                    <a href="#scroll3" class="btn btn-bubble btn-primary" id="toggleProd3">Are we done yet?</a>
                 </div>
             </div>
         </div>
+
+        <div id="scroll2"></div>
 
         <div id="infoProd3" class="text-center info-prod-hide my-4">
             <p>Now imagine a new monster that is...
@@ -89,12 +91,15 @@
             </div>
             <div class="row">
                 <div class="col text-center py-4">
-                    <a href="#" class="btn btn-empty" id="toggleProd4">O.K. Now we're ready</a>
+                    <a href="#scroll3" class="btn btn-empty" id="toggleProd4">O.K. Now we're ready</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<div id="scroll3"></div>
+
 <div id="infoProd4" class="container-fluid px-5 info-prod-hide">
     <div class="text-center">
     <h4>Annual production of plastic worldwide</h4>
@@ -179,12 +184,14 @@
 
     $('a#toggleProd2').click(function () {
         $('#infoProd2').toggleClass('info-prod-hide info-prod-show');
-        $(window).scrollTo(0, 1500);
+        $(window).scrollTo(0, document.body.scrollHeight);
     })
 
     $('a#toggleProd3').click(function () {
         $('#infoProd3').toggleClass('info-prod-hide info-prod-show');
-        $(window).scrollTo(0, 1500);
+        $('html,body').animate({
+                scrollTop: $("#scroll3").offset().top},
+            'slow');
     })
 
     $('a#toggleProd4').click(function () {
