@@ -9,16 +9,17 @@
 -->
 <html>
 <head>
+	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700" rel="stylesheet">
 	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
 	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-<title>Plastics in the ocean</title>
-<!-- write your code here -->
+	<title>Plastic in oceans</title>
 
-<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-<script src="balloon_intro_story_2.js?1558850472844"></script>
+
+	<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+	<script src="balloon_intro_story.js"></script>
 	<script>
 		var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 		function init() {
@@ -27,7 +28,6 @@
 			dom_overlay_container = document.getElementById("dom_overlay_container");
 			var comp=AdobeAn.getComposition("D205B1FA0AF74C419470862A980D0478");
 			var lib=comp.getLibrary();
-			createjs.MotionGuidePlugin.install();
 			var loader = new createjs.LoadQueue(false);
 			loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
 			loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
@@ -47,7 +47,7 @@
 			for(i=0; i<ssMetadata.length; i++) {
 				ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
 			}
-			exportRoot = new lib.balloon_intro_story2();
+			exportRoot = new lib.balloon_intro_story();
 			stage = new lib.Stage(canvas);
 			//Registers the "tick" event listener.
 			fnStartAnimation = function() {
@@ -61,11 +61,14 @@
 			fnStartAnimation();
 		}
 	</script>
-</head>
 
+</head>
 <body onload="init();" class="body-frame">
 <div class="h-100 row align-items-center">
 	<div class="col">
+		<div class="position-absolute intro-btn-align">
+			<a href="balloon_intro_story_2.html" class="text-center btn btn-primary btn-bubble bubble-intro opacity-in">I want a balloon!</a>
+		</div>
 		<div id="animation_container">
 			<canvas id="canvas" class="intro-canvas"></canvas>
 			<div id="dom_overlay_container">
@@ -76,8 +79,8 @@
 				<a href="plastic-in-marine-life.html" target="_self" class="text-center color-light">skip</a>
 			</small>
 		</div>
+<!--		<div id='_preload_div_' style='position:absolute; top:0; left:0; display: inline-block; height:720px; width: 1280px; text-align: center;'>	<span style='display: inline-block; height: 100%; vertical-align: middle;'></span>	<img src=images-anim/_preloader.gif style='vertical-align: middle; max-height: 100%'/></div>-->
 	</div>
 </div>
-
 </body>
 </html>

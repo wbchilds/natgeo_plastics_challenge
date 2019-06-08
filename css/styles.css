@@ -146,11 +146,11 @@ a:hover {
     color: var(--color-light);
     text-align: center;
     border-radius: 1.5rem;
-    padding: 0.5rem 0.25rem;
+    padding: 0.5rem;
     position: absolute;
     z-index: 1;
-    top: 2rem;
-    right: 0;
+    top: 10rem;
+    right: 8rem;
     margin: auto;
     z-index: 999;
 }
@@ -172,11 +172,11 @@ a:hover {
     color: var(--color-light);
     text-align: center;
     border-radius: 1.5rem;
-    padding: 0.5rem 0.25rem;
+    padding: 0.5rem;
     position: absolute;
     z-index: 1;
-    top: 5rem;
-    right: -35%;
+    top: 2rem;
+    left: 45%;
     margin: auto auto 0 auto;
     z-index: 999;
 }
@@ -256,15 +256,25 @@ a:hover {
 .bird {
     position: absolute;
     width: 20rem;
+    height: auto;
     margin-top: 2rem;
     margin-left: 4vw;
     z-index: 2;
+    -webkit-animation: bird-anim 7s ease-in infinite;
+    animation: bird-anim 7s ease-in infinite;
 }
+@keyframes bird-anim {
+    from {margin-top: 2rem; margin-left: 4vw;}
+    35% {margin-top: 1rem; margin-left: 6vw;}
+    65% {margin-top: 2.5rem; margin-left: 5vw;}
+    to {margin-top: 2rem; margin-left: 4vw;}
+}
+
 .bird-img {
     background-image: url(../img/ic_bird.svg);
-    width: 10vw;
-    height: 10vh;
-    opacity: 1;
+    width: 4.5rem;
+    height: 5rem;
+    opacity: 0.95;
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -279,17 +289,17 @@ a:hover {
 }
 @keyframes turtle-anim {
     from {width: 19rem; margin-top: 10rem; margin-left: 25vw;}
-    15% {transform: rotate(8deg); width: 19rem; margin-top: 12rem; margin-left: 55vw;}
-    35% {transform: rotate(-6deg); width: 19rem; margin-top: 10rem; margin-left: 30vw;}
-    65% {transform: rotate(4deg); width: 19rem; margin-top: 15rem; margin-left: 75vw;}
-    80% {transform: rotate(-5deg); width: 19rem; margin-top: 13rem; margin-left: 90vw;}
-    to {transform: rotate(0deg); width: 10rem; margin-top: 12rem; margin-left: 25vw;}
+    15% {transform: rotate(8deg); width: 19rem; margin-top: 12rem; margin-left: 47vw;}
+    35% {transform: rotate(-6deg); width: 19rem; margin-top: 10rem; margin-left: 68vw;}
+    65% {transform: rotate(4deg); width: 19rem; margin-top: 15rem; margin-left: 90vw;}
+    80% {transform: rotate(-5deg); width: 19rem; margin-top: 13rem; margin-left: 38vw;}
+    to {transform: rotate(0deg); width: 19rem; margin-top: 12rem; margin-left: 25vw;}
 }
 .turtle-img {
-    background-image: url(../img/ic_turtle.svg);
-    width: 10vw;
-    height: 10vh;
-    opacity: 0.75;
+    background-image: url(../img/turtle_anim.gif);
+    width: 7rem;
+    height: 7rem;
+    opacity: 0.95;
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -305,9 +315,9 @@ a:hover {
 }
 .whale-img {
     background-image: url(../img/whale-anim.gif);
-    width: 30vw;
-    height: 30vh;
-    opacity: 0.75;
+    width: 26rem;
+    height: 26rem;
+    opacity: 0.95;
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -608,4 +618,29 @@ a:hover {
 canvas#intro_canvas {
     width: 100vw;
     height: 85vh;
+}
+
+
+/* intro illustration */
+.background-illustration {
+    background: url("../img/illustration_screen/full_image.svg") no-repeat;
+    height: 100vh;
+    background-color: #32abde;
+    background-size: contain;
+    background-position-y: bottom;
+}
+
+.balloon-img {
+    position: absolute;
+    width: 2vw;
+    bottom: 20vw;
+    left: 14vw;
+    -webkit-animation: balloon-anim 50s infinite ease-out;
+    animation: balloon-anim 50s infinite ease-out;
+}
+@keyframes balloon-anim {
+    15% {transform: rotate(25deg);}
+    30% {transform: rotate(-45deg);}
+    75% {transform: rotate(15deg); width: 3.5vw;}
+    to {transform: rotate(-15deg); bottom: 100vw; width: 2vw;}
 }
