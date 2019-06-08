@@ -30,6 +30,9 @@ html, body {
 .fixed-top {
     z-index: unset;
 }
+.footer {
+    background: var(--color-sea);
+}
 
 /*text colors */
 .color-main {
@@ -96,27 +99,25 @@ a:hover {
     border: none;
 }
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
-    background-color: var(--color-sea);
+    background-color: var(--color-highlight);
     border: none;
 }
 .bubble-intro {
-    margin-left: 50vw;
-    margin-bottom: 8vh;
+    margin: 37vw auto auto 45%;
 }
 .btn-bubble {
     border-bottom-right-radius: 0;
     padding: 1rem 2rem;
-    position: relative;
     background-color: var(--color-highlight);
     z-index: 9;
     transition: all .15s;
 }
 .btn-bubble:hover, .btn-bubble:focus, .btn-bubble:active, .btn-bubble:visited {
-    background-color: var(--color-sea);
+    background-color: var(--color-main) !important;
     border: none;
 }
 .btn-bubble:hover::after, .btn-bubble:focus::after, .btn-bubble:active::after, .btn-bubble:visited::after {
-    border-bottom: 1rem solid var(--color-sea);
+    border-bottom: 1rem solid var(--color-main);
 }
 .btn-bubble::after {
     width: 0;
@@ -426,11 +427,11 @@ a:hover {
 /* story-1 */
 .appear-sea {
     -webkit-animation: appear-sea-anim 9s ease-in;
-    animation: appear-sea-anim 8s ease-in;
+    animation: appear-sea-anim 5s ease-in;
 }
 @keyframes appear-sea-anim {
     from {margin-bottom: -10rem; }
-    65% {margin-bottom: -8rem; }
+    35% {margin-bottom: -4rem; }
     100% {margin-bottom: 0; }
 }
 .float {
@@ -528,8 +529,7 @@ a:hover {
         padding: 0.5rem;
     }
     .bubble-intro {
-        top: 62vh;
-        left: -7vw;
+        margin-right: 55%;
     }
     .btn-bubble:after {
         margin-left: 0.5rem;
@@ -562,7 +562,6 @@ a:hover {
 /* intro pages */
 
 .body-frame {
-    background-color: #4bbee29c;
     height: 100%;
 }
 .intro-btn-align {
