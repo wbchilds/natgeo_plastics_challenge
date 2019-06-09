@@ -18,28 +18,28 @@
                 <path d="M196.758563,88.1824 C195.162563,115.4304 204.912563,142.1214 205.912563,169.3984 C207.107563,201.9874 190.092563,239.3634 201.468563,269.9244 C209.922563,292.6364 238.095563,297.6014 260.128563,307.6924 C282.162563,317.7834 309.459563,347.3344 338.877563,314.9244 C368.296563,282.5134 343.313563,178.2864 307.129563,110.2424 C297.322563,91.7994 285.309563,74.1714 269.209563,60.8634 C258.020563,51.6144 232.259563,34.7714 216.545563,40.4924 C201.444563,45.9904 197.559563,74.5114 196.758563,88.1824" id="Fill-7" fill="#F0635C"></path>
             </g>
         </g>
-        <g id="Group" transform="translate(54.000000, 358.000000)" fill="#7136E2">
-            <circle id="Oval-Copy-14" cx="100.5" cy="2.5" r="2.5"></circle>
-            <circle id="Oval-Copy-13" cx="93.5" cy="2.5" r="2.5"></circle>
-            <circle id="Oval-Copy-12" cx="86.5" cy="2.5" r="2.5"></circle>
-            <circle id="Oval-Copy-11" cx="79.5" cy="2.5" r="2.5"></circle>
-            <circle id="Oval-Copy-10" cx="72.5" cy="2.5" r="2.5"></circle>
-            <circle id="Oval-Copy-9" cx="65.5" cy="2.5" r="2.5"></circle>
-            <circle id="Oval-Copy-8" cx="58.5" cy="2.5" r="2.5"></circle>
-            <circle id="Oval-Copy-7" cx="51.5" cy="2.5" r="2.5"></circle>
-            <circle id="Oval-Copy-6" cx="44.5" cy="2.5" r="2.5"></circle>
-            <circle id="Oval-Copy-5" cx="37.5" cy="2.5" r="2.5"></circle>
-            <circle id="Oval-Copy-4" cx="30.5" cy="2.5" r="2.5"></circle>
-            <circle id="Oval-Copy-3" cx="23.5" cy="2.5" r="2.5"></circle>
-            <circle id="Oval-Copy-2" cx="16.5" cy="2.5" r="2.5"></circle>
-            <circle id="Oval-Copy" cx="9.5" cy="2.5" r="2.5"></circle>
-            <circle id="Oval" cx="2.5" cy="2.5" r="2.5"></circle>
+        <g id="Group" transform="translate(69.000000, 298.000000)" fill="#7136E2">
+            <ellipse id="Oval-Copy-14" cx="96" cy="30.0451128" rx="8" ry="7.93984962"></ellipse>
+            <ellipse id="Oval-Copy-13" cx="74" cy="30.0451128" rx="8" ry="7.93984962"></ellipse>
+            <ellipse id="Oval-Copy-12" cx="52" cy="30.0451128" rx="8" ry="7.93984962"></ellipse>
+            <ellipse id="Oval-Copy-11" cx="30" cy="30.0451128" rx="8" ry="7.93984962"></ellipse>
+            <ellipse id="Oval-Copy-10" cx="8" cy="30.0451128" rx="8" ry="7.93984962"></ellipse>
+            <ellipse id="Oval-Copy-9" cx="96" cy="52.1503759" rx="8" ry="7.93984962"></ellipse>
+            <ellipse id="Oval-Copy-8" cx="74" cy="52.1503759" rx="8" ry="7.93984962"></ellipse>
+            <ellipse id="Oval-Copy-7" cx="52" cy="52.1503759" rx="8" ry="7.93984962"></ellipse>
+            <ellipse id="Oval-Copy-6" cx="30" cy="52.1503759" rx="8" ry="7.93984962"></ellipse>
+            <ellipse id="Oval-Copy-5" cx="8" cy="52.1503759" rx="8" ry="7.93984962"></ellipse>
+            <ellipse id="Oval-Copy-4" cx="96" cy="7.93984962" rx="8" ry="7.93984962"></ellipse>
+            <ellipse id="Oval-Copy-3" cx="74" cy="7.93984962" rx="8" ry="7.93984962"></ellipse>
+            <ellipse id="Oval-Copy-2" cx="52" cy="7.93984962" rx="8" ry="7.93984962"></ellipse>
+            <ellipse id="Oval-Copy" cx="30" cy="7.93984962" rx="8" ry="7.93984962"></ellipse>
+            <ellipse id="Oval" cx="8" cy="7.93984962" rx="8" ry="7.93984962"></ellipse>
         </g>
         <g id="Group-104" transform="translate(29.000000, 28.000000)">
             <g id="Group-6" transform="translate(0.000000, 113.000000)"></g>
             <g id="Group-12" transform="translate(103.000000, 80.000000)">
-                <polyline id="Fill-9" fill="#EF847F" opacity="0.5" points="163.516 -3.26849658e-13 7.22267732e-14 144.997 275.57 160.773"></polyline>
-                <polyline id="Stroke-11" stroke="#FADB75" stroke-width="3" points="163.516 -3.41060513e-13 7.22267732e-14 144.997 275.57 160.773"></polyline>
+                <polyline id="Fill-9" fill="#EF847F" opacity="0.5" points="163.516 -3.26849658e-13 -5.68434189e-14 124.997 275.57 160.773"></polyline>
+                <polyline id="Stroke-11" stroke="#FADB75" stroke-width="3" points="163.516 -3.41060513e-13 -5.68434189e-14 124.997 275.57 160.773"></polyline>
             </g>
             <g id="Group-15" transform="translate(404.000000, 41.000000)" fill="#FADB75">
                 <path d="M28.8343,42.2744 L0.5443,13.9844 L12.7193,1.8094 C14.6713,-0.1426 17.8373,-0.1426 19.7893,1.8094 L41.0093,23.0294 C42.9613,24.9814 42.9613,28.1474 41.0093,30.0994 L28.8343,42.2744 Z" id="Fill-13"></path>
@@ -142,15 +142,15 @@
             <tspan x="18" y="98">just one minute</tspan>
         </text>
         <text id="1min" font-family="Comfortaa-Bold, Comfortaa" font-size="49" font-weight="bold" fill="#FADB75">
-            <tspan x="48" y="365">1min</tspan>
+            <tspan x="64" y="305">1min</tspan>
         </text>
-        <text id="0.1---5,000-μm" font-family="Comfortaa-Bold, Comfortaa" font-size="16" font-weight="bold" fill="#7136E2">
-            <tspan x="53" y="387">0.1 - 5,000 μm</tspan>
+        <text id="0.1---5,000-μm" font-family="Comfortaa-Bold, Comfortaa" font-size="16" font-weight="bold" fill="#FFFFFF">
+            <tspan x="69" y="384">0.1 - 5,000 μm</tspan>
         </text>
-        <g id="Group-2" transform="translate(54.000000, 365.000000)" stroke="#2A1169">
+        <g id="Group-2" transform="translate(69.000000, 361.000000)" stroke="#FFFFFF">
             <path d="M0.5,0 L0.5,6" id="Path-53"></path>
-            <path d="M4.5,0 L4.5,6" id="Path-53-Copy"></path>
-            <path d="M0.5,3 L4.5,3" id="Path-54"></path>
+            <path d="M15.5,0 L15.5,6" id="Path-53-Copy"></path>
+            <path d="M0.5,3 L15.5,3" id="Path-54"></path>
         </g>
     </g>
 </svg>
