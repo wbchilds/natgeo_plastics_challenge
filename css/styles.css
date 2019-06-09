@@ -154,8 +154,8 @@ a:hover {
     padding: 0.5rem;
     position: absolute;
     z-index: 1;
-    top: 10rem;
-    right: 8rem;
+    top: 4rem;
+    right: 0;
     margin: auto;
     z-index: 999;
 }
@@ -737,4 +737,15 @@ canvas#intro_canvas {
 .info-help {
     top: 15vw;
     left: 85vw;
+}
+
+.wind {
+    top: 3vw;
+    left: 50vw;
+}
+.wind > .tooltiptext-bottom {
+    width: 30vh;
+    min-width: 20rem;
+    padding: 1.25rem;
+    font-size: 1rem;
 }
