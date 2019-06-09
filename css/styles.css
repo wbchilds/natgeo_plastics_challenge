@@ -25,7 +25,7 @@ html, body {
     --color-contrast2: #6B0EE2;
     --color-sea: #4BBEE2;
     --color-dark: #2a1169;
-    --color-light: #e8fbff;
+    --color-light: rgba(232, 251, 255, 0.76);
 }
 .fixed-top {
     z-index: unset;
@@ -74,6 +74,10 @@ a:hover {
     min-height: 100vh;
     display: flex;
     align-items: center;
+}
+.absolute-center {
+    position: absolute;
+    width: -webkit-fill-available;
 }
 .btn {
     border-radius: 0.5rem;
@@ -192,10 +196,39 @@ a:hover {
     border-style: solid;
     border-color: transparent rgba(19, 17, 54, 0.91) transparent transparent;
 }
+.tooltip .tooltiptext-left {
+    visibility: hidden;
+    width: 12rem;
+    font-size: 0.8rem;
+    background-color: rgba(19, 17, 54, 0.85);
+    color: var(--color-light);
+    text-align: center;
+    border-radius: 1.5rem;
+    padding: 0.5rem;
+    position: absolute;
+    z-index: 1;
+    top: 2rem;
+    right: 100%;
+    margin: auto auto 0 auto;
+    z-index: 999;
+}
+.tooltip .tooltiptext-left::after {
+    content: "";
+    position: absolute;
+    bottom: 35%;
+    left: 104%;
+    margin-left: -0.5rem;
+    border-width: 0.5rem;
+    border-style: solid;
+    border-color: transparent transparent transparent rgba(19, 17, 54, 0.91) ;
+}
 .tooltip:hover .tooltiptext-bottom {
     visibility: visible;
 }
 .tooltip:hover .tooltiptext-right {
+    visibility: visible;
+}
+.tooltip:hover .tooltiptext-left {
     visibility: visible;
 }
 
@@ -255,7 +288,6 @@ a:hover {
 }
 /* graphics */
 .bird {
-    position: absolute;
     width: 20rem;
     height: auto;
     margin-top: 2rem;
@@ -280,21 +312,21 @@ a:hover {
     background-repeat: no-repeat;
 }
 .turtle {
-    position: absolute;
+    position: fixed;
     width: 19rem;
-    margin-top: 10rem;
+    margin-top: 0rem;
     margin-left: 25vw;
-    z-index: 2;
+    z-index: 1;
     -webkit-animation: turtle-anim 140s ease-in infinite;
     animation: turtle-anim 140s ease-in infinite;
 }
 @keyframes turtle-anim {
-    from {width: 19rem; margin-top: 10rem; margin-left: 25vw;}
-    15% {transform: rotate(8deg); width: 19rem; margin-top: 12rem; margin-left: 47vw;}
-    35% {transform: rotate(-6deg); width: 19rem; margin-top: 10rem; margin-left: 68vw;}
-    65% {transform: rotate(4deg); width: 19rem; margin-top: 15rem; margin-left: 90vw;}
-    80% {transform: rotate(-5deg); width: 19rem; margin-top: 13rem; margin-left: 38vw;}
-    to {transform: rotate(0deg); width: 19rem; margin-top: 12rem; margin-left: 25vw;}
+    from {width: 19rem; margin-top: 0rem; margin-left: 25vw;}
+    15% {transform: rotate(8deg); width: 19rem; margin-top: 2rem; margin-left: 47vw;}
+    35% {transform: rotate(-6deg); width: 19rem; margin-top: 1rem; margin-left: 68vw;}
+    65% {transform: rotate(4deg); width: 19rem; margin-top: 1.5rem; margin-left: 90vw;}
+    80% {transform: rotate(-5deg); width: 19rem; margin-top: 2rem; margin-left: 38vw;}
+    to {transform: rotate(0deg); width: 19rem; margin-top: 0rem; margin-left: 25vw;}
 }
 .turtle-img {
     background-image: url(../img/turtle_anim.gif);
@@ -306,18 +338,25 @@ a:hover {
 }
 
 .whale {
-    position: absolute;
-    width: 35rem;
-    margin-top: 30rem;
-    margin-left: 80vw;
+    bottom: 4rem;
+    position: fixed;
+    margin-left: 60vw;
     z-index: 1;
     -webkit-animation: whale-anim 140s ease-in infinite;
     animation: whale-anim 140s ease-in infinite;
 }
+@keyframes whale-anim {
+    from {bottom: 4rem; margin-left: 80vw;}
+    15% {transform: rotate(8deg); bottom: 8rem; margin-left: 65vw;}
+    35% {transform: rotate(-6deg); bottom: 4rem; margin-left: 45vw;}
+    65% {transform: rotate(4deg); bottom: 6rem; width: 35rem; margin-left: 25vw;}
+    80% {transform: rotate(-5deg); bottom: 5rem; margin-left: 30vw;}
+    95% {transform: rotate(0deg); bottom: 3.6rem; margin-left: 75vw; width: 30rem;}
+}
 .whale-img {
     background-image: url(../img/whale-anim.gif);
     width: 26rem;
-    height: 26rem;
+    height: 10rem;
     opacity: 0.95;
     background-size: contain;
     background-repeat: no-repeat;
@@ -328,14 +367,6 @@ a:hover {
     background: url('../img/img_sea.svg') repeat-x bottom;
     -webkit-animation: sea-anim 10s;
     animation: sea-anim 30s infinite linear;
-}
-@keyframes whale-anim {
-    from {margin-top: 35rem; margin-left: 80vw;}
-    15% {transform: rotate(8deg); margin-top: 28rem; margin-left: 65vw;}
-    35% {transform: rotate(-6deg); margin-top: 32rem; margin-left: 45vw;}
-    65% {transform: rotate(4deg); margin-top: 26rem; width: 35rem; margin-left: 25vw;}
-    80% {transform: rotate(-5deg); margin-top: 34rem; margin-left: 30vw;}
-    95% {transform: rotate(0deg); margin-top: 30rem; margin-left: 75vw; width: 30rem;}
 }
 @keyframes sea-anim {
     from {margin-left: -200%;}
@@ -435,8 +466,8 @@ a:hover {
     100% {margin-bottom: 0; }
 }
 .float {
-    -webkit-animation: float-anim 8s infinite;
-    animation: float-anim 8s infinite;;
+    -webkit-animation: float-anim 10s infinite;
+    animation: float-anim 10s infinite;;
     animation-delay: 4s;
 }
 @keyframes float-anim {
@@ -446,36 +477,48 @@ a:hover {
     75% {transform: rotate(-25deg);}
     to {transform: rotate(30deg);}
 }
+.float1 {
+    -webkit-animation: float-anim1 12s infinite;
+    animation: float-anim1 12s infinite;;
+    animation-delay: 6s;
+}
+@keyframes float-anim1 {
+    10% {transform: rotate(15deg);}
+    25% {transform: rotate(-5deg);}
+    40% {transform: rotate(10deg);}
+    75% {transform: rotate(-25deg);}
+    to {transform: rotate(30deg);}
+}
 .delay-1 {
-    margin-top: 91vh;
-    transform: rotate3d(2,4,1,20deg);
+    margin-top: 81vh;
+    transform: rotate(20deg);
     animation: delay-1-anim 9s ease-out;
 }
 @keyframes delay-1-anim {
-    from {transform: rotate3d(5,1,6,60deg); margin-top: -5rem; margin-right: 1rem;}
-    to {transform: rotate3d(2,4,1,20deg); margin-top: 91vh;}
+    from {transform: rotate(60deg); margin-top: -5rem; margin-right: 1rem;}
+    to {transform: rotate(20deg); margin-top: 81vh;}
 }
 .delay-2 {
-    margin-top: 90vh;
-    transform: rotate3d(-6,9,3,-25deg);
+    margin-top: 80vh;
+    transform: rotate(-25deg);
     margin-right: 1rem;
     animation: delay-2-anim 8.5s ease-out;
 }
 @keyframes delay-2-anim {
-    from {transform: rotate3d(1,6,2,10deg) ; margin-top: -10rem;}
-    15% {transform: rotate3d(1,6,2,10deg) ; margin-top: -10rem;}
-    to {transform: rotate3d(-6,9,3,-25deg) ; margin-top: 90vh; margin-right: 2rem;}
+    from {transform: rotate(10deg) ; margin-top: -10rem;}
+    15% {transform: rotate(10deg) ; margin-top: -10rem;}
+    to {transform: rotate(-25deg) ; margin-top: 80vh; margin-right: 2rem;}
 }
 .delay-3 {
-    transform: rotate3d(7,10,2,25deg) ;
+    transform: rotate(25deg) ;
     margin-right: 2rem;
-    margin-top: 93vh;
+    margin-top: 83vh;
     animation: delay-3-anim 9.5s ease-out;
 }
 @keyframes delay-3-anim {
-    from {transform: rotate3d(1,5,6,-25deg) ; margin-top: -7rem;}
-    20% {transform: rotate3d(1,5,6,-25deg) ; margin-top: -7rem;}
-    to {transform: rotate3d(7,2,2,25deg) ; margin-top: 93vh; margin-right: 1.5rem;}
+    from {transform: rotate(-25deg) ; margin-top: -7rem;}
+    20% {transform: rotate(-25deg) ; margin-top: -7rem;}
+    to {transform: rotate(25deg) ; margin-top: 83vh; margin-right: 1.5rem;}
 }
 .opacity-in {
     animation: opacity-in-anim 3s linear;
@@ -642,4 +685,56 @@ canvas#intro_canvas {
     30% {transform: rotate(-45deg);}
     75% {transform: rotate(15deg); width: 3.5vw;}
     to {transform: rotate(-15deg); bottom: 100vw; width: 2vw;}
+}
+.info-circle {
+    position: absolute;
+    width: 11vw;
+    height: 11vw;
+    border-radius: 50%;
+    border: var(--color-highlight) solid 0.2vw;
+    color: var(--color-highlight);
+    background: var(--color-light);
+}
+.info-circle::after {
+    content: "";
+    border-left: solid var(--color-highlight) 0.15rem;
+    height: 25vh;
+    margin: 0.15rem auto auto 5vw;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+.info-circle:hover{
+    color: var(--color-dark);
+    border-color: var(--color-dark);
+    background: var(--color-light);
+}
+.info-circle:hover::after{
+    border-color: var(--color-dark);
+}
+.text-in-circle {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.15vw;
+}
+.info-balloons {
+    top: 1vw;
+    left: 4vw;
+}
+.info-production {
+    top: 10vw;
+    left: 20vw;
+}
+.info-sealife {
+    top: 10vw;
+    left: 35vw;
+}
+.info-solutions {
+    top: 2.5vw;
+    left: 70vw;
+}
+.info-help {
+    top: 15vw;
+    left: 85vw;
 }
