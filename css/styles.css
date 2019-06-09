@@ -55,6 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 a {
     background: transparent;
+    color: var(--color-sea);
 }
 a:hover {
     color: var(--color-highlight);
@@ -237,6 +238,13 @@ a:hover {
     border-radius: 1rem;
     background: #4bbee22e;
 }
+.card {
+    background-color: #ecfcfec4;
+    padding: 2rem;
+    box-shadow: 0 0.25rem 0.5rem 0 rgba(0,0,0,0.2);
+    border: none;
+    border-radius: 0 0 1rem 1rem;
+}
 
 .index-mid {
     z-index: 0;
@@ -367,6 +375,9 @@ a:hover {
     background: url('../img/img_sea.svg') repeat-x bottom;
     -webkit-animation: sea-anim 10s;
     animation: sea-anim 30s infinite linear;
+}
+.sea-high {
+    height: 10rem !important;
 }
 @keyframes sea-anim {
     from {margin-left: -200%;}

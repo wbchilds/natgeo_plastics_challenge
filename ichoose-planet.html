@@ -13,33 +13,191 @@
 <body class="background">
 
 <div class="vertical-center">
-    <div class="container container-narrow">
-        <div class="row justify-content-center my-4">
+    <div class="container container-narrow mb-5">
+
+        <div class="row justify-content-center mb-5">
             <div class="col text-center">
-                <h4>I choose</h4>
-                <h1 class="text-uppercase">planet</h1>
-                <p class="pt-4">Each of us can (and must) do a lot to help. Even the most simple things can make a big difference.</p>
-                <p>Start with what you're best at or by making simple changes in your daily life.</p>
+                <h2 class="font-weight-bold color-highlight mb-0" style="font-size: 2.7rem; letter-spacing: 0.25rem;">I choose</h2>
+                <h1 class="text-uppercase color-highlight my-0" style="font-size: 3.5rem;">planet</h1>
+                <p class="pt-4">Everyone can do a lot to help.
+                    <br>Even the most simple things can make a big difference.</p>
+                <h4>Start with what you're best at or by making simple changes in your daily life.</h4>
             </div>
         </div>
+
         <div class="row justify-content-center">
-            <div class="col-sm-4 col-md-3 text-center py-1">
+
+            <div class="col text-center py-1">
                 <p>I choose to</p>
-                <a href="#" class="btn btn-empty" data-toggle="tooltip" data-placement="bottom" title="Coming soon...">REDUCE</a>
+                <a href="#reduce" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="reduce" class="btn btn-empty">REDUCE</a>
             </div>
-            <div class="col-sm-4 col-md-3 text-center py-1">
+
+            <div class="col text-center py-1">
                 <p>I choose to</p>
-                <a href="recycle-1.html" class="btn btn-empty">RECYCLE</a>
+                <a href="#recycle" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="recycle" class="btn btn-empty">RECYCLE</a>
             </div>
-            <div class="col-sm-4 col-md-3 text-center py-1">
+
+            <div class="col text-center py-1">
                 <p>I choose to</p>
-                <a href="#" class="btn btn-empty" data-toggle="tooltip" data-placement="bottom" title="Coming soon...">RECOVER</a>
+                <a href="#recover" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="recover" class="btn btn-empty">RECOVER</a>
             </div>
+
+            <!-- collapsed content REDUCE -->
+            <div id="reduce" class="collapse">
+                <div class="card mb-5">
+                    <a href="#reduce-tips" class="text-center">
+                        Jump to tips<br>
+                        <img src="img/arrow-down.svg" class="badge-sm">
+                    </a>
+                    <h4 class="font-weight-bold color-highlight">BYO</h4>
+                    <p><b>Bringing Your Own</b> water bottle, coffee/tea cup, glass, metal straw, food container, and any other kind of container that may reduce your use of single use is not only simple, but more hygienic and even trendier!</p>
+
+                    <hr>
+                    <h4 class="font-weight-bold color-highlight">NPP!</h4>
+                    <p>A simple habit to build is to always ask for <b>No Plastic Please</b>. Many restaurants and shops give single-use plastic to customers without even asking, but we can educate them to reduce by saying</p>
+                    <ul>
+                        <li>I don't need a bag</li>
+                        <li>No plastic straw, please</li>
+                    </ul>
+
+                    <hr>
+                    <h4 class="font-weight-bold color-highlight">SNP</h4>
+                    <p><b>Shopping No Plastic</b> is usually better for our wellbeing as well as for the planet, and sometimes is even cheaper! Besides, it can be delivered straight to our home!</p>
+
+                    <hr>
+                    <div id="reduce-tips">
+
+                    <h5 class="py-2font-weight-bold text-center">And here are some stylish tips:</h5>
+                    <p>
+                        <a href="https://www.biome.com.au/" target="_blank">BIOME</a>
+                        Australian shop with lots of amazing products with no-plastic packaging and ethical sourcing
+                    </p>
+                    <p>
+                        <a href="https://thesustainabletomorrow.com/" target="_blank">The Sustainable Tomorrow</a>
+                        The amazon of wiser consumers!
+                    </p>
+                    <p>
+                        <a href="https://au.whogivesacrap.org/" target="_blank">Who gives a crap</a>
+                        Even toilet paper usually comes in plastic!!! Well, not always... Besides being  plastic free, this ethical toilet paper is a 100% recycled, helping us reduce deforestation.
+                    </p>
+                    <p>
+                        <a href="https://www.shopnaturally.com.au/plastic-free/" target="_blank">Shop naturally</a>
+                        Fancy plastic-free options for your home and kitchen.
+                    </p>
+                    <p>
+                        Go totally <a href="https://packagefreeshop.com/" target="_blank">Package Free</a>
+                        With all your health, beauty, living and more.
+                    </p>
+
+                    </div>
+                </div>
+
+                <!-- collapsed content RECYCLE -->
+                <div id="recycle" class="collapse">
+                    <div class="card mb-5">
+                        <a href="#recycle-tips" class="text-center">
+                            Jump to tips<br>
+                            <img src="img/arrow-down.svg" class="badge-sm">
+                        </a>
+                        <h4 class="font-weight-bold color-highlight">BYO</h4>
+                        <p><b>Bringing Your Own</b> water bottle, coffee/tea cup, glass, metal straw, food container, and any other kind of container that may reduce your use of single use is not only simple, but more hygienic and even trendier!</p>
+
+                        <hr>
+                        <h4 class="font-weight-bold color-highlight">NPP!</h4>
+                        <p>A simple habit to build is to always ask for <b>No Plastic Please</b>. Many restaurants and shops give single-use plastic to customers without even asking, but we can educate them to reduce by saying</p>
+                        <ul>
+                            <li>I don't need a bag</li>
+                            <li>No plastic straw, please</li>
+                        </ul>
+
+                        <hr>
+                        <h4 class="font-weight-bold color-highlight">SNP</h4>
+                        <p><b>Shopping No Plastic</b> is usually better for our wellbeing as well as for the planet, and sometimes is even cheaper! Besides, it can be delivered straight to our home!</p>
+
+                        <hr>
+                        <div id="recycle-tips">
+
+                            <h5 class="py-2font-weight-bold text-center">And here are some stylish tips:</h5>
+                            <p>
+                                <a href="https://www.biome.com.au/" target="_blank">BIOME</a>
+                                Australian shop with lots of amazing products with no-plastic packaging and ethical sourcing
+                            </p>
+                            <p>
+                                <a href="https://thesustainabletomorrow.com/" target="_blank">The Sustainable Tomorrow</a>
+                                The amazon of wiser consumers!
+                            </p>
+                            <p>
+                                <a href="https://au.whogivesacrap.org/" target="_blank">Who gives a crap</a>
+                                Even toilet paper usually comes in plastic!!! Well, not always... Besides being  plastic free, this ethical toilet paper is a 100% recycled, helping us reduce deforestation.
+                            </p>
+                            <p>
+                                <a href="https://www.shopnaturally.com.au/plastic-free/" target="_blank">Shop naturally</a>
+                                Fancy plastic-free options for your home and kitchen.
+                            </p>
+                            <p>
+                                Go totally <a href="https://packagefreeshop.com/" target="_blank">Package Free</a>
+                                With all your health, beauty, living and more.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- collapsed content RECOVER -->
+                    <div id="recover" class="collapse">
+                        <div class="card mb-5">
+                            <a href="#recover-tips" class="text-center">
+                                Jump to tips<br>
+                                <img src="img/arrow-down.svg" class="badge-sm">
+                            </a>
+                            <h4 class="font-weight-bold color-highlight">BYO</h4>
+                            <p><b>Bringing Your Own</b> water bottle, coffee/tea cup, glass, metal straw, food container, and any other kind of container that may reduce your use of single use is not only simple, but more hygienic and even trendier!</p>
+
+                            <hr>
+                            <h4 class="font-weight-bold color-highlight">NPP!</h4>
+                            <p>A simple habit to build is to always ask for <b>No Plastic Please</b>. Many restaurants and shops give single-use plastic to customers without even asking, but we can educate them to reduce by saying</p>
+                            <ul>
+                                <li>I don't need a bag</li>
+                                <li>No plastic straw, please</li>
+                            </ul>
+
+                            <hr>
+                            <h4 class="font-weight-bold color-highlight">SNP</h4>
+                            <p><b>Shopping No Plastic</b> is usually better for our wellbeing as well as for the planet, and sometimes is even cheaper! Besides, it can be delivered straight to our home!</p>
+
+                            <hr>
+                            <div id="recover-tips">
+
+                                <h5 class="py-2font-weight-bold text-center">And here are some stylish tips:</h5>
+                                <p>
+                                    <a href="https://www.biome.com.au/" target="_blank">BIOME</a>
+                                    Australian shop with lots of amazing products with no-plastic packaging and ethical sourcing
+                                </p>
+                                <p>
+                                    <a href="https://thesustainabletomorrow.com/" target="_blank">The Sustainable Tomorrow</a>
+                                    The amazon of wiser consumers!
+                                </p>
+                                <p>
+                                    <a href="https://au.whogivesacrap.org/" target="_blank">Who gives a crap</a>
+                                    Even toilet paper usually comes in plastic!!! Well, not always... Besides being  plastic free, this ethical toilet paper is a 100% recycled, helping us reduce deforestation.
+                                </p>
+                                <p>
+                                    <a href="https://www.shopnaturally.com.au/plastic-free/" target="_blank">Shop naturally</a>
+                                    Fancy plastic-free options for your home and kitchen.
+                                </p>
+                                <p>
+                                    Go totally <a href="https://packagefreeshop.com/" target="_blank">Package Free</a>
+                                    With all your health, beauty, living and more.
+                                </p>
+
+                            </div>
+                        </div>
+
+            </div>
+
         </div>
     </div>
 </div>
 
-<div class="fixed-bottom mb-4">
+<div class="fixed-bottom my-4 index-back opacity-high">
     <div class="sea"></div>
 </div>
 
