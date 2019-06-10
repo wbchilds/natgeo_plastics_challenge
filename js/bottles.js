@@ -112,7 +112,7 @@ function collisionDetection(bottle) {
     var paddleXmin = paddleX-(paddleWidth/2)
     var paddleXmax = paddleX+(paddleWidth/2)
     var uid = bottle[3]
-    if ((bottle[1] > canvas.height-paddleHeight) && (bottle[0]<paddleXmax) && (bottle[0]>paddleXmin)) {
+    if ((bottle[1] >= canvas.height-paddleHeight-20) && (bottle[0]<=paddleXmax+10) && (bottle[0]>=paddleXmin-10)) {
 	bottlescaught += 1;
 	console.log(bottlescaught);
 	return uid
