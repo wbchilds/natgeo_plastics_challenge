@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="191px" height="152px" viewBox="0 0 191 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>ic_trashtag</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ic_trashtag" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="plastics_OTHER7" transform="translate(48.000000, 27.000000)">
+            <path d="M-2.55795385e-13,2.94594032 C16,4.60631768 32,5.43650635 48,5.43650635 C64,5.43650635 80,4.60631768 96,2.94594032 L83.5324675,96.3421667 C71.6883117,98.0025441 59.8441558,98.8327328 48,98.8327328 C36.1558442,98.8327328 24.3116883,98.0025441 12.4675325,96.3421667 L-2.55795385e-13,2.94594032 Z" id="Rectangle" fill="#7136E2"></path>
+            <path d="M48,5.43650635 C74.509668,5.43650635 96,3.8381835 96,2.63461956 C96,1.43105563 74.509668,-1.13686838e-13 48,-1.13686838e-13 C21.490332,-1.13686838e-13 -2.84217094e-14,1.43105563 -2.84217094e-14,2.63461956 C-2.84217094e-14,3.8381835 21.490332,5.43650635 48,5.43650635 Z" id="Oval" fill="#2A1169"></path>
+        </g>
+        <text id="#" font-family="Comfortaa-Bold, Comfortaa" font-size="42" font-weight="bold" fill="#FFFFFF">
+            <tspan x="80" y="94">#</tspan>
+        </text>
+    </g>
+</svg>
