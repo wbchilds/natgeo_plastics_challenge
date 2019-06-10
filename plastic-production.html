@@ -72,16 +72,17 @@
         <div id="scroll2"></div>
 
         <div id="infoProd3" class="text-center info-prod-hide my-4">
-            <p>Now imagine a new monster that is...
+            <h6>Almost!</h6>
+            <p>Finally, imagine a new monster that is...
             </p>
             <h4>
-                100 times heavier than our last huge monster!!!
+                10 times heavier than our last huge monster!!!
             </h4>
             <div class="row justify-content-center align-items-center">
-                <div id="repeat100B">
-                    <img src="img/ic_bigmonster.svg" class="bigmonster-sm monster-sm">
+                <div id="repeat10B">
+                    <img src="img/ic_bigmonster.svg" class="bigmonster-sm monster-md">
                 </div>
-                <h1> = <img src="img/ic_hugemonster.svg"> = 1,000,000 T</h1>
+                <h1> = <img src="img/ic_hugemonster.svg" class="ic-lg img-fluid"> = 100,000 T</h1>
             </div>
             <div class="row">
                 <div class="col text-center py-4">
@@ -96,7 +97,9 @@
 
 <div id="infoProd4" class="container-fluid px-5 info-prod-hide">
     <div class="text-center">
-        <h4>Annual production of plastic worldwide</h4>
+        <h4>Daily production of plastic worldwide</h4>
+        <p>'Cause showing you annual production is way too big to use anything cute in this world</p>
+        <small>and rounding numbers</small>
     </div>
     <div class="row justify-content-center">
         <div class="col text-center">
@@ -107,35 +110,48 @@
             </div>
         </div>
         <div class="col text-center">
-            <h2 class="ver-cent-push-dwn font-weight-bold">TODAY</h2>
-            <p>820,000 T</p>
-            <div id="repeat82">
+            <h2 class="ver-cent-push-dwn font-weight-bold">2017</h2>
+            <p>960,000 T</p>
+            <div id="repeat96">
                 <img src="img/ic_bigmonster.svg" class="bigmonster">
             </div>
         </div>
         <div class="col text-center">
             <h2 class="ver-cent-push-dwn font-weight-bold">by 2050</h2>
-            <p>90,400,000 T</p>
-            <span id="repeat90">
+            <p>29,200,000 T</p>
+            <div id="repeat292">
                     <img src="img/ic_hugemonster.svg" class="hugemonster">
-                </span>
-            <span id="repeat40">
-                    <img src="img/ic_bigmonster.svg" class="bigmonster">
-                </span>
+            </div>
         </div>
     </div>
+    <hr class="my-5">
+    <div class="container container-narrow">
     <div class="row">
         <div class="col text-center my-4">
-            <p>Because plastic can take over 500 years to degrade, all that we have created is still around in our world.</p>
             <h4 class="ver-cent-push-dwn font-weight-bold text-center">From all that plastic, 30% ends up in our oceans</h4>
+            <div id="repeat29">
+                <img src="img/ic_bigmonster.svg" class="bigmonster ic-sm">
+            </div>
+            <p>
+            <small>That would be 29 big monsters free in the sea on a single day as in 2017.</small>
+            </p>
+            <p>And because plastic can take over 500 years to degrade,
+                it's all only breaking down into small pieces that are just easier to ingest and breath.
+                All that we have created is still around in our world and it's giving cute ocean creatures a really hard time.</p>
         </div>
     </div>
-    <div class="row mb-5">
+        <hr>
+        <br>
+
+    </div>
+
+<!--    <div class="row mb-5">
         <div class="col text-center py-1">
-            <p>Are you now ready to become a hero?</p>
+            <h2>Are you now ready to become a hero?</h2>
             <a href="solutions-menu.html" class="btn btn-empty">LET'S SAVE OUR OCEANS</a>
         </div>
-    </div>
+    </div>-->
+
     <div class="mb-5">
         &nbsp;
     </div>
@@ -169,20 +185,23 @@
     for (var i = 1; i < 100; i++) {
         $('#repeat100').append($('.bluewhale-sm').last().clone(true));
     }
-    for (var i = 1; i < 100; i++) {
-        $('#repeat100B').append($('.bigmonster-sm').last().clone(true));
+    for (var i = 1; i < 10; i++) {
+        $('#repeat10B').append($('.bigmonster-sm').last().clone(true));
     }
     for (var i = 1; i < 41; i++) {
         $('#repeat41').append($('.bluewhale').last().clone(true));
     }
-    for (var i = 1; i < 82; i++) {
-        $('#repeat82').append($('.bigmonster').last().clone(true));
+    for (var i = 1; i < 96; i++) {
+        $('#repeat96').append($('.bigmonster').last().clone(true));
     }
-    for (var i = 1; i < 90; i++) {
-        $('#repeat90').append($('.hugemonster').last().clone(true));
+    for (var i = 1; i < 292; i++) {
+        $('#repeat292').append($('.hugemonster').last().clone(true));
     }
     for (var i = 1; i < 40; i++) {
         $('#repeat40').append($('.bigmonster').last().clone(true));
+    }
+    for (var i = 1; i < 29; i++) {
+        $('#repeat29').append($('.bigmonster').last().clone(true));
     }
 
 

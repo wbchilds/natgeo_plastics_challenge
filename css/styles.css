@@ -609,8 +609,12 @@ a:hover {
     width: 0.8rem;
     margin: 0 0.1rem;
 }
-#repeat100, #repeat100B {
-    max-width: 15rem;
+.monster-md {
+    width: 2.5rem;
+    margin: 0 0.5rem;
+}
+#repeat100, #repeat10B {
+    max-width: 14rem;
 }
 
 /* intro pages */
@@ -760,3 +764,5 @@ canvas#intro_canvas {
     padding: 1.25rem;
     font-size: 1rem;
 }
+
+.collapse.in { min-height: 50px;border: 1px solid blue; }
