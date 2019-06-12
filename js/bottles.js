@@ -1,5 +1,6 @@
 var canvas = document.getElementById("intro_canvas");
 var ctx = canvas.getContext("2d");
+ctx.font = '8px Comfortaa'
 var dx = 2;
 var dy = 1;
 var rightPressed = false;
@@ -9,6 +10,7 @@ var paddleWidth = 24;
 var paddleX = (canvas.width-paddleWidth) /2;
 var bottlecount = 0;
 var bottlescaught = 0;
+var bottleslost = 0;
 var bottleids = 0;
 var imgBottle = new Image;
 imgBottle.src = 'img/plastics_bottle_PETE1.svg'
@@ -85,6 +87,13 @@ function updateBottles() {
 function drawBottles() {
 	bottlequeue.map(drawBottle)	
 }
+function drawScore(bottlescaught,bottleslost) {
+    caughttxt = `Bottles caught: ${bottlescaught}`
+    losttxt = `Bottles lost: ${bottleslost}`
+    ctx.fillStyle = '#2a1169'
+    ctx.fillText(caughttxt,canvas.width-100,canvas.height-20);
+    ctx.fillText(losttxt,canvas.width-100,canvas.height-10);
+}
 function drawAll() {
     mseconds = mseconds + 1;
     var seconds = mseconds/100;
@@ -95,13 +104,14 @@ function drawAll() {
     	drawBottles();
 	drawPaddle();
 	updateBottles();
+	drawScore(bottlescaught,bottleslost);
 
 	//paddle
 	if (rightPressed && paddleX < canvas.width-paddleWidth) {
-		paddleX +=7;
+		paddleX +=3;
 	}
 	else if (leftPressed && paddleX > 0 ){
-		paddleX -= 7;
+		paddleX -= 3;
 	}
 
 
@@ -116,6 +126,9 @@ function collisionDetection(bottle) {
 	bottlescaught += 1;
 	console.log(bottlescaught);
 	return uid
+    }
+    else {
+	bottleslost += 1;
     }
 
 }
