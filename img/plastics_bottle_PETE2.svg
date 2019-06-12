@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="164px" height="437px" viewBox="0 0 164 437" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>plastics_bottle_PETE1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="plastics_bottle_PETE1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4-Copy-2">
+            <path d="M116.288583,73.2346835 C144.452005,86.2168522 164,114.697268 164,147.743363 L164,413.778761 C164,426.603497 153.603497,437 140.778761,437 L23.2212389,437 C10.3965028,437 -3.04038459e-14,426.603497 -3.55271368e-14,413.778761 L-3.55271368e-14,147.743363 C-3.95741162e-14,114.697268 19.5479951,86.2168522 47.7114169,73.2346835 L50.7619048,30.9380531 L113.238095,30.9380531 L116.288583,73.2346835 Z" id="Combined-Shape" fill="#6663D6"></path>
+            <g id="Group-3" transform="translate(46.857143, 0.000000)">
+                <path d="M15.480826,-4.76063633e-13 L54.8048883,-4.76063633e-13 C63.3547124,-4.7763421e-13 70.2857143,6.93100187 70.2857143,15.480826 L70.2857143,46.4070796 L-6.39488462e-14,46.4070796 L-6.39488462e-14,15.480826 C-6.32195408e-14,6.93100187 6.93100187,-4.74493056e-13 15.480826,-4.76063633e-13 Z" id="Rectangle-Copy-2" fill="#3532A9"></path>
+                <rect id="Rectangle" fill="#3532A9" x="0" y="42.539823" width="70.2857143" height="15.4690265"></rect>
+                <rect id="Rectangle" stroke-opacity="0.5" stroke="#FFFFFF" stroke-width="3.87020649" fill="#FFFFFF" x="17.5541509" y="13.5368732" width="1" height="19.3333333" rx="0.5"></rect>
+                <rect id="Rectangle-Copy-3" stroke-opacity="0.5" stroke="#FFFFFF" stroke-width="3.87020649" fill="#FFFFFF" x="35.1255794" y="9.66961652" width="1.98693637" height="27.0678466" rx="0.993468184"></rect>
+                <rect id="Rectangle-Copy-4" stroke-opacity="0.5" stroke="#FFFFFF" stroke-width="3.87020649" fill="#FFFFFF" x="52.697008" y="13.5368732" width="1" height="19.3333333" rx="0.5"></rect>
+            </g>
+            <rect id="Rectangle" fill="#3532A9" x="42.952381" y="54.1415929" width="78.0952381" height="7.73451327" rx="3.86725664"></rect>
+            <rect id="Rectangle" fill="#3532A9" x="0" y="166.292035" width="164" height="119.884956"></rect>
+        </g>
+    </g>
+</svg>

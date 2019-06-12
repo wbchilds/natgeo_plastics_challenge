@@ -13,7 +13,7 @@ var bottlescaught = 0;
 var bottleslost = 0;
 var bottleids = 0;
 var imgBottle = new Image;
-imgBottle.src = 'img/plastics_bottle_PETE1.svg'
+imgBottle.src = 'img/plastics_bottle_PETE2.svg'
 var imgBin = new Image(4,32);
 imgBin.src = 'img/ic_recycling_bin.svg';
 
