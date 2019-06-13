@@ -1,7 +1,23 @@
-var canvas = document.getElementById("bottles_canvas");
-var ctx = canvas.getContext("2d");
-ctx.font = '8px Comfortaa'
-var dx = 2;
+function setupCanvas(canvas) {
+    // Get the device pixel ratio, falling back to 1.
+    var dpr = window.devicePixelRatio || 1;
+    // Get the size of the canvas in CSS pixels.
+    var rect = canvas.getBoundingClientRect();
+    // Give the canvas pixel dimensions of their CSS
+    // size * the device pixel ratio.
+    var ctx = canvas.getContext('2d');
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+    // Scale all drawing operations by the dpr, so you
+    // don't have to worry about the difference.
+    ctx.scale(dpr, dpr);
+    return ctx;
+}
+
+var ctx = setupCanvas(document.querySelector('canvas'));
+var canvas = document.getElementById('bottles_canvas');
+ctx.font = '8px Comfortaa';
+// var dx = 2;
 var dy = 1;
 var rightPressed = false;
 var leftPressed = false;
@@ -13,7 +29,7 @@ var bottlescaught = 0;
 var bottleslost = 0;
 var bottleids = 0;
 var imgBottle = new Image;
-imgBottle.src = 'img/plastics_bottle_PETE2.svg'
+imgBottle.src = 'img/plastics_bottle_PETE2.svg';
 var imgBin = new Image(4,32);
 imgBin.src = 'img/ic_recycling_bin.svg';
 
@@ -42,9 +58,9 @@ function keyUpHandler(e) {
 }
 
 function createBottle() {
-    x = Math.random()*canvas.width
-    deg = (Math.random()-0.5)*100
-    bottlequeue.push([x,0,deg,bottleids])
+    x = Math.random()*canvas.width;
+    deg = (Math.random()-0.5)*100;
+    bottlequeue.push([x,0,deg,bottleids]);
     bottlecount += 1;
     bottleids += 1;
 }
@@ -88,9 +104,9 @@ function drawBottles() {
 	bottlequeue.map(drawBottle)	
 }
 function drawScore(bottlescaught,bottleslost) {
-    caughttxt = `Bottles caught: ${bottlescaught}`
-    losttxt = `Bottles lost: ${bottleslost}`
-    ctx.fillStyle = '#2a1169'
+    caughttxt = `Bottles caught: ${bottlescaught}`;
+    losttxt = `Bottles lost: ${bottleslost}`;
+    ctx.fillStyle = '#2a1169';
     ctx.fillText(caughttxt,canvas.width-100,canvas.height-20);
     ctx.fillText(losttxt,canvas.width-100,canvas.height-10);
 }
@@ -99,7 +115,7 @@ function drawAll() {
     var seconds = mseconds/100;
 	if ( Math.random() <= 0.10 ){
 		createBottle()
-	};
+	}
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
     	drawBottles();
 	drawPaddle();

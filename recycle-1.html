@@ -9,47 +9,37 @@
     <title>The plastic game is fun but it's not</title>
 </head>
 <body class="background">
+<div class="">
+    <div class="fixed-top index-front my-4 px-5 container">
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-10 ">
+                <details>
+                    <summary class="color-highlight text-center">how to play</summary>
+                    <p>Use your arrow keys. Try getting as many bottles as you can into the recycling machine before they reach the ocean.
+                        <br>Let's see if recycling the amount we use is as easy as it seems!</p>
+                    <p>...and by the way, we're throwing just the 30% that ends up in the oceans, because the real production amount could break your computer.</p>
+                </details>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-10 col-md-6 text-center">
+                <button class="btn btn-empty mb-4" value="REPLAY" onclick="window.location.reload()"><span class="ic-lg">↻</span> REPLAY</button>
+                <h2 class="ver-cent-push-dwn color-highlight font-weight-bold pb-4">20,000 plastic bottles are produced every second…</h2>
+                <h4>We'll need an increase of 70% recycling worldwide in the next 5 years if we want to save our oceans</h4>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
 <div class="mb-5">
-    <div class="fixed-top index-front my-4 px-5 container background opacity-high">
+    <canvas id="bottles_canvas">
+    </canvas>
+</div>
 
-        <div class="row text-center d-flex justify-content-center">
-
-            <div class="col container-narrow">
-                <p>Use your arrow keys to try fetching as many bottles as you can to get them in the recycling machine before they reach the sea.
-                    <br>let's see if recycling the amount we use is as easy as it seems!</p>
-
-                <p>...and by the way, we're throwing just the 30% that ends up in the oceans, because the real production amount could break your computer.</p>
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="vertical-center">
-        <div class="container position-absolute">
-            <div class="row">
-                <div class="col text-center">
-                    <canvas id="bottles_canvas">
-                    </canvas>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-sm-10 col-md-6 text-center">
-                    <button class="btn btn-empty mb-4" value="REPLAY" onclick="window.location.reload()"><span class="ic-lg">↻</span> REPLAY</button>
-                    <h2 class="ver-cent-push-dwn color-highlight font-weight-bold pb-4">20,000 plastic bottles are produced every second…</h2>
-                    <h4>We'll need an increase of 70% recycling worldwide in the next 5 years if we want to save our oceans</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-
-
-
-
-<div class="footer py-2 fixed-bottom text-center">
+<div class="footer mt-5 py-2 fixed-bottom text-center">
     <a href="index.html" class="color-light">
         <img src="img/ic_planet_white.svg" alt="back to intro"><br>
         <small>
