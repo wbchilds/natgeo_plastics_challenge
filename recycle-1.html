@@ -10,41 +10,44 @@
 </head>
 <body class="background">
 <div class="mb-5">
-<div class="fixed-top index-front my-4 px-5 container background opacity-high">
+    <div class="fixed-top index-front my-4 px-5 container background opacity-high">
 
         <div class="row text-center d-flex justify-content-center">
 
             <div class="col container-narrow">
                 <p>Use your arrow keys to try fetching as many bottles as you can to get them in the recycling machine before they reach the sea.
-                    <br>let's see if recycling the amount we use is as easy as it seems...</p>
+                    <br>let's see if recycling the amount we use is as easy as it seems!</p>
 
-                <small>...and by the way, we're throwing just the 30% that ends up in the oceans, because the real production amount would break your computer!</small>
+                <p>...and by the way, we're throwing just the 30% that ends up in the oceans, because the real production amount could break your computer.</p>
             </div>
 
         </div>
 
-</div>
-
-<div class="container position-absolute">
-    <div class="row">
-        <div class="col text-center">
-            <canvas id="intro_canvas">
-            </canvas>
-        </div>
     </div>
-</div>
-<div class="vertical-center">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-sm-10 col-md-6 text-center">
-                <h2 class="ver-cent-push-dwn color-highlight font-weight-bold pb-4">20,000 plastic bottles are produced every second…</h2>
-                <h4>We'll need an increase of 70% recycling worldwide in the next 5 years if we want to save our oceans</h4>
+
+    <div class="vertical-center">
+        <div class="container position-absolute">
+            <div class="row">
+                <div class="col text-center">
+                    <canvas id="bottles_canvas">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-10 col-md-6 text-center">
+                    <button class="btn btn-empty mb-4" value="REPLAY" onclick="window.location.reload()"><span class="ic-lg">↻</span> REPLAY</button>
+                    <h2 class="ver-cent-push-dwn color-highlight font-weight-bold pb-4">20,000 plastic bottles are produced every second…</h2>
+                    <h4>We'll need an increase of 70% recycling worldwide in the next 5 years if we want to save our oceans</h4>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    </div>
 
-</div>
+
+
 
 <div class="footer py-2 fixed-bottom text-center">
     <a href="index.html" class="color-light">
@@ -59,11 +62,13 @@
     <div class="sea opacity-high"></div>
 </div>
 
-
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/bottles.js" ></script>
+
+
+
 
 </body>
 </html>

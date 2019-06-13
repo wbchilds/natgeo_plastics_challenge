@@ -1,4 +1,4 @@
-var canvas = document.getElementById("intro_canvas");
+var canvas = document.getElementById("bottles_canvas");
 var ctx = canvas.getContext("2d");
 ctx.font = '8px Comfortaa'
 var dx = 2;
