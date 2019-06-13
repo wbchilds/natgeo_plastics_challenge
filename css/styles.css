@@ -684,6 +684,11 @@ canvas#bottles_canvas {
     height: auto;
 }
 
+.border-dark {
+    border-radius: 50%;
+    padding: 2rem;
+    border: var(--color-highlight) solid 0.25rem;
+}
 
 /* intro illustration */
 .background-illustration {

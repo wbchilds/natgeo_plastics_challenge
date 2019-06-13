@@ -5,25 +5,31 @@ function setupCanvas(canvas) {
     var rect = canvas.getBoundingClientRect();
     // Give the canvas pixel dimensions of their CSS
     // size * the device pixel ratio.
-    var ctx = canvas.getContext('2d');
     canvas.width = rect.width * dpr;
     canvas.height = rect.height * dpr;
+    var ctx = canvas.getContext('2d');
     // Scale all drawing operations by the dpr, so you
     // don't have to worry about the difference.
     ctx.scale(dpr, dpr);
     return ctx;
 }
 
-var ctx = setupCanvas(document.querySelector('canvas'));
+// Now this line will be the same size on the page
+// but will look sharper on high-DPI devices!
 var canvas = document.getElementById('bottles_canvas');
+var ctx = setupCanvas(canvas);
+
+// var ctx = canvas.getContext('2d');
 ctx.font = '8px Comfortaa';
-// var dx = 2;
+var bottleRescued= document.getElementById('bottlesRescued')
+var bottleLost= document.getElementById('bottlesLost')
+var dx = 0.25;
 var dy = 1;
 var rightPressed = false;
 var leftPressed = false;
-var paddleHeight = 24;
-var paddleWidth = 24;
-var paddleX = (canvas.width-paddleWidth) /2;
+var paddleHeight = 74;
+var paddleWidth = 74;
+var paddleX = (canvas.clientWidth-paddleWidth) /2;
 var bottlecount = 0;
 var bottlescaught = 0;
 var bottleslost = 0;
@@ -34,7 +40,8 @@ var imgBin = new Image(4,32);
 imgBin.src = 'img/ic_recycling_bin.svg';
 
 var mseconds = 0;
-var bottlequeue= []; 
+var bottlequeue= [];
+
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
@@ -58,15 +65,15 @@ function keyUpHandler(e) {
 }
 
 function createBottle() {
-    x = Math.random()*canvas.width;
+    x = Math.random()*canvas.clientWidth;
     deg = (Math.random()-0.5)*100;
     bottlequeue.push([x,0,deg,bottleids]);
     bottlecount += 1;
     bottleids += 1;
 }
 
-function drawPaddle(img,x,y,width,height) {
-    ctx.drawImage(imgBin,paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+function drawPaddle() {
+    ctx.drawImage(imgBin,paddleX, canvas.clientHeight-paddleHeight, paddleWidth, paddleHeight);
 }
 
 function drawImageRot(img,x,y,width,height,deg){
@@ -93,8 +100,8 @@ function drawBottle(bottle) {
 }
 
 function updateBottles() {
-	bottlequeue = bottlequeue.map(bottle => [bottle[0],bottle[1]+dy,bottle[2],bottle[3]])
-	bottlequeue = bottlequeue.filter(bottle => bottle[1] <  canvas.height)
+	bottlequeue = bottlequeue.map(bottle => [bottle[0],bottle[1]+dy,bottle[2]+dx,bottle[3]])
+	bottlequeue = bottlequeue.filter(bottle => bottle[1] <  canvas.clientHeight)
 
     	collisions = bottlequeue.map(collisionDetection).filter(Number)
         bottlequeue = bottlequeue.filter(bottle => !collisions.includes(bottle[3]))
@@ -104,11 +111,10 @@ function drawBottles() {
 	bottlequeue.map(drawBottle)	
 }
 function drawScore(bottlescaught,bottleslost) {
-    caughttxt = `Bottles caught: ${bottlescaught}`;
-    losttxt = `Bottles lost: ${bottleslost}`;
-    ctx.fillStyle = '#2a1169';
-    ctx.fillText(caughttxt,canvas.width-100,canvas.height-20);
-    ctx.fillText(losttxt,canvas.width-100,canvas.height-10);
+    bottleRescued.innerText = bottlescaught
+    bottleLost.innerText = bottleslost
+    //ctx.fillText(caughttxt,canvas.clientWidth-100,canvas.clientHeight-20);
+    //ctx.fillText(losttxt,canvas.clientWidth-100,canvas.clientHeight-10);
 }
 function drawAll() {
     mseconds = mseconds + 1;
@@ -116,18 +122,18 @@ function drawAll() {
 	if ( Math.random() <= 0.10 ){
 		createBottle()
 	}
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
-    	drawBottles();
+	ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
+	drawBottles();
 	drawPaddle();
 	updateBottles();
 	drawScore(bottlescaught,bottleslost);
 
 	//paddle
-	if (rightPressed && paddleX < canvas.width-paddleWidth) {
-		paddleX +=3;
+	if (rightPressed && paddleX < canvas.clientWidth-paddleWidth) {
+		paddleX +=10;
 	}
 	else if (leftPressed && paddleX > 0 ){
-		paddleX -= 3;
+		paddleX -= 10;
 	}
 
 
@@ -138,7 +144,7 @@ function collisionDetection(bottle) {
     var paddleXmin = paddleX-(paddleWidth/2)
     var paddleXmax = paddleX+(paddleWidth/2)
     var uid = bottle[3]
-    if ((bottle[1] >= canvas.height-paddleHeight-20) && (bottle[0]<=paddleXmax+10) && (bottle[0]>=paddleXmin-10)) {
+    if ((bottle[1] >= canvas.clientHeight-paddleHeight-20) && (bottle[0]<=paddleXmax+10) && (bottle[0]>=paddleXmin-10)) {
 	bottlescaught += 1;
 	console.log(bottlescaught);
 	return uid

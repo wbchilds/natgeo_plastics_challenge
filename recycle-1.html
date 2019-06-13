@@ -9,15 +9,23 @@
     <title>The plastic game is fun but it's not</title>
 </head>
 <body class="background">
-<div class="">
-    <div class="fixed-top index-front my-4 px-5 container">
 
+<div class="position-absolute m-5">
+        <h2 class="color-main">
+            Bottles rescued <span class="color-highlight" id="bottlesRescued"></span>
+        </h2>
+        <p class="color-main">
+            Bottles towards the ocean <span id="bottlesLost"></span>
+        </p>
+</div>
+<div class="vertical-center mb-5">
+    <div class="index-front px-5 container">
         <div class="row justify-content-center mb-5">
             <div class="col-10 ">
                 <details>
                     <summary class="color-highlight text-center">how to play</summary>
                     <p>Use your arrow keys. Try getting as many bottles as you can into the recycling machine before they reach the ocean.
-                        <br>Let's see if recycling the amount we use is as easy as it seems!</p>
+                        <br>let's see if recycling the amount we use is as easy as it seems!</p>
                     <p>...and by the way, we're throwing just the 30% that ends up in the oceans, because the real production amount could break your computer.</p>
                 </details>
             </div>
@@ -29,17 +37,17 @@
                 <h4>We'll need an increase of 70% recycling worldwide in the next 5 years if we want to save our oceans</h4>
             </div>
         </div>
-
     </div>
-
+<div class="position-absolute pb-5">
+    <div class="container mb-5">
+        <canvas id="bottles_canvas">
+        </canvas>
+        <br><br><br>
+    </div>
+</div>
 </div>
 
-<div class="mb-5">
-    <canvas id="bottles_canvas">
-    </canvas>
-</div>
-
-<div class="footer mt-5 py-2 fixed-bottom text-center">
+<div class="footer py-2 fixed-bottom text-center">
     <a href="index.html" class="color-light">
         <img src="img/ic_planet_white.svg" alt="back to intro"><br>
         <small>
