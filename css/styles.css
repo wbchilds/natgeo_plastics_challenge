@@ -149,21 +149,22 @@ a:hover {
     border: none;
     opacity: 1;
     cursor: pointer;
+    font-family: Comfortaa;
 }
 
 .tooltip .tooltiptext-bottom {
     visibility: hidden;
-    width: 12rem;
-    font-size: 0.8rem;
+    min-width: 20rem;
+    width: 40vw;
     background-color: rgba(19, 17, 54, 0.85);
     color: var(--color-light);
     text-align: center;
     border-radius: 1.5rem;
-    padding: 0.5rem;
+    padding: 0.25rem;
     position: absolute;
     z-index: 1;
-    top: 4rem;
-    right: 0;
+    top: 6rem;
+    right: -100%;
     margin: auto;
     z-index: 999;
 }
@@ -171,7 +172,7 @@ a:hover {
     content: "";
     position: absolute;
     bottom: 100%;
-    right: 10%;
+    right: 45%;
     margin-left: -0.5rem;
     border-width: 0.5rem;
     border-style: solid;
@@ -281,6 +282,9 @@ a:hover {
 }
 .opacity-mid {
     opacity: 0.6;
+}
+.opacity-low {
+    opacity: 0.3;
 }
 .water-background {
     height: 100vh;
@@ -705,28 +709,28 @@ canvas#bottles_canvas {
     bottom: 20vw;
     left: 14vw;
     -webkit-animation: balloon-anim 50s infinite ease-out;
-    animation: balloon-anim 50s infinite ease-out;
+    animation: balloon-anim 20s infinite ease-out;
 }
 @keyframes balloon-anim {
     15% {transform: rotate(25deg);}
-    30% {transform: rotate(-45deg);}
-    75% {transform: rotate(15deg); width: 3.5vw;}
-    to {transform: rotate(-15deg); bottom: 100vw; width: 2vw;}
+    30% {transform: rotate(-45deg); width: 3.5vw;}
+    75% {transform: rotate(15deg); width: 2vw;}
+    to {transform: rotate(-15deg); bottom: 70vw; width: 0.5vw;}
 }
 .info-circle {
     position: absolute;
     width: 11vw;
     height: 11vw;
     border-radius: 50%;
-    border: var(--color-highlight) solid 0.2vw;
+    border: var(--color-highlight) solid 0.25vw;
     color: var(--color-highlight);
     background: var(--color-light);
 }
 .info-circle::after {
     content: "";
-    border-left: solid var(--color-highlight) 0.15rem;
-    height: 25vh;
-    margin: 0.15rem auto auto 5vw;
+    border-left: solid var(--color-highlight) 0.05rem;
+    height: 14vh;
+    margin: 0.15rem auto auto 5.2vw;
     left: 0;
     right: 0;
     display: flex;
@@ -743,6 +747,7 @@ canvas#bottles_canvas {
     min-height: 100%;
     display: flex;
     align-items: center;
+    font-weight: bolder;
     font-size: 1.15vw;
 }
 .info-balloons {
@@ -757,18 +762,40 @@ canvas#bottles_canvas {
     top: 10vw;
     left: 35vw;
 }
+.info-story-deepdive {
+    left: 64vw;
+    top: 16vw;
+}
 .info-solutions {
     top: 2.5vw;
-    left: 70vw;
+    left: 74vw;
 }
 .info-help {
     top: 15vw;
     left: 85vw;
 }
-
-.wind {
+.wind-static {
     top: 3vw;
     left: 50vw;
+}
+.cloud-1 {
+    top: 35vw;
+    left: 10vw;
+    animation: cloud1-anim infinite 110s ease-out;
+}
+@keyframes cloud1-anim {
+    50% {top: 20vw;}
+    to { top: 30vw;left: 120vw; opacity: 0;}
+}
+.cloud-2 {
+    top: 15vw;
+    left: -10vw;
+    animation: cloud2-anim infinite 60s ease-in;
+}
+@keyframes cloud2-anim {
+    50% {
+        top: 20vw;}
+    to { top: 25vw;left: 100vw; opacity: 0;}
 }
 .wind > .tooltiptext-bottom {
     width: 30vh;
