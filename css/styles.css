@@ -845,14 +845,14 @@ a.info-whale:hover > .img-whale-story {
 .collapse.in { min-height: 50px;border: 1px solid blue; }
 
 
-.landscape-notice {
+.mobile-portrait-show {
     display: none;
 }
 @media all and (orientation: portrait){
-    .landscape-notice {
+    .mobile-portrait-show {
         display: block;
     }
-    .landscape-on {
+    .mobile-portrait-hide {
         display: none;
     }
 }
