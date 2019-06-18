@@ -10,7 +10,7 @@
 </head>
 <body class="background">
 
-<div class="position-absolute m-5">
+<div class="position-absolute p-5">
         <h2 class="color-main">
             Bottles rescued <span class="color-highlight" id="bottlesRescued"></span>
         </h2>
@@ -18,10 +18,10 @@
             Bottles towards the ocean <span id="bottlesLost"></span>
         </p>
 </div>
-<div class="vertical-center mb-5">
-    <div class="index-front px-5 container">
+<div class="vertical-center">
+    <div class="px-5 container index-front">
         <div class="row justify-content-center mb-5">
-            <div class="col-10 ">
+            <div class="col-10">
                 <details>
                     <summary class="color-highlight text-center">how to play</summary>
                     <p>Use your arrow keys. Try getting as many bottles as you can into the recycling machine before they reach the ocean.
@@ -33,18 +33,32 @@
         <div class="row justify-content-center">
             <div class="col-sm-10 col-md-6 text-center">
                 <button class="btn btn-empty mb-4" value="REPLAY" onclick="window.location.reload()"><span class="ic-lg">↻</span> REPLAY</button>
-                <h2 class="ver-cent-push-dwn color-highlight font-weight-bold pb-4">20,000 plastic bottles are produced every second…</h2>
-                <h4>We'll need an increase of 70% recycling worldwide in the next 5 years if we want to save our oceans</h4>
+                <h2 class="ver-cent-push-dwn color-highlight font-weight-bold mb-0 pb-0">
+                    20,000 plastic bottles are produced every second…
+                </h2>
+                <h4 class="mt-0 pt-0">
+                About 30% end up in our oceans.
+                </h4>
+                <p>We'll need an increase of 70% recycling worldwide in the next 5 years if we want to save our oceans</p>
             </div>
         </div>
     </div>
-<div class="position-absolute pb-5">
-    <div class="container mb-5">
+</div>
+<div class="container-fluid fixed-bottom index-mid">
         <canvas id="bottles_canvas">
         </canvas>
-        <br><br><br>
-    </div>
 </div>
+<div class="position-absolute cloud-1 opacity-low">
+    <img src="img/illustration_screen/ic_cloud1.svg" class="img-fluid">
+</div>
+<div class="position-absolute cloud-2 opacity-mid">
+    <img src="img/illustration_screen/ic_cloud2.svg" class="img-fluid">
+</div>
+<div class="position-absolute cloud-3 opacity-low">
+    <img src="img/illustration_screen/ic_cloud2.svg" class="img-fluid">
+</div>
+<div class="fixed-bottom index-back">
+    <div class="sea opacity-high"></div>
 </div>
 
 <div class="footer py-2 fixed-bottom text-center">
@@ -56,9 +70,6 @@
     </a>
 </div>
 
-<div class="fixed-bottom index-back">
-    <div class="sea opacity-high"></div>
-</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

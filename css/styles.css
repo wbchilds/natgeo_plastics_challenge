@@ -25,7 +25,7 @@ html, body {
     --color-contrast2: #6B0EE2;
     --color-sea: #4BBEE2;
     --color-dark: #2a1169;
-    --color-light: rgba(232, 251, 255, 0.76);
+    --color-light: rgba(232, 251, 255, 0.7);
 }
 .fixed-top {
     z-index: unset;
@@ -686,6 +686,7 @@ a:hover {
 canvas#bottles_canvas {
     width: 100vw;
     height: auto;
+    margin-bottom: 3.8rem;
 }
 
 .border-dark {
@@ -702,7 +703,34 @@ canvas#bottles_canvas {
     background-size: contain;
     background-position-y: bottom;
 }
-
+.info-whale {
+    position: relative;
+    top: 74vh;
+    left: 68vw;
+    animation: whale-mainpage-anim 50s infinite;
+}
+@keyframes whale-mainpage-anim {
+    25% {
+        top: 68vh;}
+    50% {
+        top: 71vh; left: 76vw;}
+    75% {top: 69vh;}
+    to {top: 74vh;
+        left: 68vw;}
+}
+.img-whale-story {
+    max-width: 10rem;
+    width: 8vw;
+    height: 8vw;
+    border: var(--color-highlight) dashed;
+    border-radius: 50%;
+    background: var(--color-light);
+    padding: 0.15rem;
+}
+a.info-whale:hover > .img-whale-story {
+    background-color: #4BBEE2;
+    border-color: var(--color-dark);
+}
 .balloon-img {
     position: absolute;
     width: 2vw;
@@ -797,6 +825,16 @@ canvas#bottles_canvas {
         top: 20vw;}
     to { top: 25vw;left: 100vw; opacity: 0;}
 }
+.cloud-3 {
+    top: 75vw;
+    left: 20vw;
+    animation: cloud2-anim infinite 40s ease-in;
+}
+@keyframes cloud3-anim {
+    50% {
+        top: 70vw;}
+    to { top: 80vw;left: 100vw; opacity: 0;}
+}
 .wind > .tooltiptext-bottom {
     width: 30vh;
     min-width: 20rem;
@@ -805,3 +843,16 @@ canvas#bottles_canvas {
 }
 
 .collapse.in { min-height: 50px;border: 1px solid blue; }
+
+
+.landscape-notice {
+    display: none;
+}
+@media all and (orientation: portrait){
+    .landscape-notice {
+        display: block;
+    }
+    .landscape-on {
+        display: none;
+    }
+}
