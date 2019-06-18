@@ -708,6 +708,7 @@ canvas#bottles_canvas {
     top: 74vh;
     left: 68vw;
     animation: whale-mainpage-anim 50s infinite;
+    display: inline;
 }
 @keyframes whale-mainpage-anim {
     25% {
