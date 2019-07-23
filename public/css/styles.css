@@ -33,6 +33,18 @@ html, body {
 .footer {
     background: var(--color-sea);
 }
+.footer img {
+    background: var(--color-sea);
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    max-width: 20rem;
+    transition: all 0.5s ease-in;
+}
+.footer:hover img {
+    background: var(--color-highlight);
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+}
 
 /*text colors */
 .color-main {
@@ -287,6 +299,7 @@ a:hover {
     opacity: 0.3;
 }
 .water-background {
+    margin-top: -3rem;
     height: 100vh;
     padding-top: 25vh;
     background: rgba(75,190,226,1);
@@ -356,6 +369,10 @@ a:hover {
     background-repeat: no-repeat;
 }
 
+.whale-center {
+    left: -10vw;
+    opacity: 0.9;
+}
 .whale {
     bottom: 4rem;
     position: fixed;
@@ -392,12 +409,12 @@ a:hover {
 }
 @keyframes sea-anim {
     from {margin-left: -200%;}
-    10% {margin-bottom: -2rem;}
-    25% {margin-bottom: -1.5rem;}
-    40% {margin-bottom: -2.5rem;}
-    55% {margin-bottom: 0rem;}
-    70% {margin-bottom: -1.5rem;}
-    85% {margin-bottom: -0.5rem;}
+    10% {margin-bottom: 2rem;}
+    25% {margin-bottom: 1.7rem;}
+    40% {margin-bottom: 1.9rem;}
+    55% {margin-bottom: 2rem;}
+    70% {margin-bottom: 1.7rem;}
+    85% {margin-bottom: 1.9rem;}
     to {margin-left: 0%;}
 }
 
@@ -855,5 +872,8 @@ a.info-whale:hover > .img-whale-story {
     }
     .mobile-portrait-hide {
         display: none;
+    }
+    .footer {
+        max-height: 2.8rem;
     }
 }

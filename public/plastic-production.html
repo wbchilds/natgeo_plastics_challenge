@@ -50,7 +50,7 @@
             </div>
         </div>
 
-        <div id="infoProd2" class="text-center info-prod-hide my-4">
+        <div id="infoProd2" class="text-center info-prod-hide my-5 pb-5">
             <p>
                 Now imagine...
             </p>
@@ -71,7 +71,7 @@
 
         <div id="scroll2"></div>
 
-        <div id="infoProd3" class="text-center info-prod-hide my-4">
+        <div id="infoProd3" class="text-center info-prod-hide my-5 pb-5">
             <h6>Almost!</h6>
             <p>Finally, imagine a new monster that is...
             </p>
@@ -80,7 +80,7 @@
             </h4>
             <div class="row justify-content-center align-items-center">
                 <div id="repeat10B">
-                    <img src="img/ic_bigmonster.svg" class="bigmonster-sm monster-md">
+                    <img src="img/ic_bigmonster.svg" class="monster-md">
                 </div>
                 <h1> = <img src="img/ic_hugemonster.svg" class="ic-lg img-fluid"> = 100,000 T</h1>
             </div>
@@ -113,7 +113,7 @@
             <h2 class="ver-cent-push-dwn font-weight-bold">2017</h2>
             <p>960,000 T</p>
             <div id="repeat96">
-                <img src="img/ic_bigmonster.svg" class="bigmonster">
+                <img src="img/ic_bigmonster.svg" class="bigmonster-pink">
             </div>
         </div>
         <div class="col text-center">
@@ -124,23 +124,25 @@
             </div>
         </div>
     </div>
-    <hr class="my-5">
-    <div class="container container-narrow">
+
+    <div class="container container-narrow my-5">
     <div class="row">
         <div class="col text-center my-4">
-            <h4 class="ver-cent-push-dwn font-weight-bold text-center">From all that plastic, 30% ends up in our oceans</h4>
-            <div id="repeat29">
-                <img src="img/ic_bigmonster.svg" class="bigmonster ic-sm">
+            <div class="whale whale-center">
+                <img src="img/whale-anim.gif" class="ic-lg">
             </div>
+            <h4 class="ver-cent-push-dwn font-weight-bold text-center">From all that plastic, 30% ends up in our oceans</h4>
             <p>
             <small>That would be 29 big monsters free in the sea on a single day (as in 2017).</small>
             </p>
+            <div id="repeat29" class="text-center px-5 pb-4">
+                <img src="img/ic_bigmonster.svg" class="bigmonster ic-sm">
+            </div>
             <p>And because plastic can take over 500 years to degrade,
                 it's all only breaking down into small pieces that are just easier to ingest and breath.
                 All that we have created is still around in our world and it's giving cute ocean creatures a really hard time.</p>
         </div>
     </div>
-        <hr>
         <br>
 
     </div>
@@ -186,13 +188,13 @@
         $('#repeat100').append($('.bluewhale-sm').last().clone(true));
     }
     for (var i = 1; i < 10; i++) {
-        $('#repeat10B').append($('.bigmonster-sm').last().clone(true));
+        $('#repeat10B').append($('.monster-md').last().clone(true));
     }
     for (var i = 1; i < 41; i++) {
         $('#repeat41').append($('.bluewhale').last().clone(true));
     }
     for (var i = 1; i < 96; i++) {
-        $('#repeat96').append($('.bigmonster').last().clone(true));
+        $('#repeat96').append($('.bigmonster-pink').last().clone(true));
     }
     for (var i = 1; i < 292; i++) {
         $('#repeat292').append($('.hugemonster').last().clone(true));
