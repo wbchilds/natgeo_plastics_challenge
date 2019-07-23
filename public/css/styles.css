@@ -56,6 +56,9 @@ html, body {
 .color-light {
     color: var(--color-light);
 }
+.color-white {
+    color: #fff;
+}
 
 body {
     height: 100vh;
@@ -72,6 +75,9 @@ a {
 a:hover {
     color: var(--color-highlight);
     text-decoration: none;
+}
+summary:focus {
+    outline: none;
 }
 .btn-secondary {
     background: transparent;
@@ -163,7 +169,32 @@ a:hover {
     cursor: pointer;
     font-family: Comfortaa;
 }
-
+.tooltip .tooltiptext-top {
+    visibility: hidden;
+    min-width: 20rem;
+    width: 25vw;
+    background-color: rgba(19, 17, 54, 0.85);
+    color: var(--color-light);
+    text-align: center;
+    border-radius: 1.5rem;
+    padding: 1.25rem;
+    position: absolute;
+    z-index: 1;
+    top: 2rem;
+    left: -240%;
+    margin: auto;
+    z-index: 999;
+}
+.tooltip .tooltiptext-top::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    right: 45%;
+    margin-left: -0.5rem;
+    border-width: 0.5rem;
+    border-style: solid;
+    border-color: transparent transparent rgba(19, 17, 54, 0.91) transparent;
+}
 .tooltip .tooltiptext-bottom {
     visibility: hidden;
     min-width: 20rem;
@@ -242,6 +273,9 @@ a:hover {
     border-width: 0.5rem;
     border-style: solid;
     border-color: transparent transparent transparent rgba(19, 17, 54, 0.91) ;
+}
+.tooltip:hover .tooltiptext-top {
+    visibility: visible;
 }
 .tooltip:hover .tooltiptext-bottom {
     visibility: visible;
@@ -703,7 +737,7 @@ a:hover {
 canvas#bottles_canvas {
     width: 100vw;
     height: auto;
-    margin-bottom: 3.8rem;
+    margin-bottom: 4.5rem;
 }
 
 .border-dark {
@@ -762,6 +796,26 @@ a.info-whale:hover > .img-whale-story {
     30% {transform: rotate(-45deg); width: 3.5vw;}
     75% {transform: rotate(15deg); width: 2vw;}
     to {transform: rotate(-15deg); bottom: 70vw; width: 0.5vw;}
+}
+.info-anim1 {
+    animation: circle-1 15s linear infinite;
+}
+@keyframes circle-1 {
+    from {margin-top: 0; margin-left: 0.75rem;}
+    25% {margin-top: 0.5rem; margin-left: 1.5rem;}
+    50% {margin-top: 1rem; margin-left: 0rem;}
+    75% {margin-top: 0.25rem; margin-left: -0.75rem;}
+    to {margin-top: 0; margin-left: 0.75rem;}
+}
+.info-anim2 {
+    animation: circle-1 25s linear infinite;
+}
+@keyframes circle-2 {
+    from {margin-top: 0.5rem; margin-left: 1rem;}
+    25% {margin-top: 0.75rem; margin-left: 0.75rem;}
+    50% {margin-top: 1rem; margin-left: 0rem;}
+    75% {margin-top: 0.85rem; margin-left: -0.75rem;}
+    to {margin-top: 0.5rem; margin-left: 1rem;}
 }
 .info-circle {
     position: absolute;
