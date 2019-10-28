@@ -162,6 +162,9 @@ summary:focus {
     border-color: transparent transparent transparent var(--color-dark);
 }
 
+.details-landing-page {
+    margin-bottom: -20rem;
+}
 .tooltip {
     position: relative;
     border: none;
@@ -321,6 +324,9 @@ summary:focus {
     background-size: cover;
     padding: 0.2rem 0.2rem 0.2rem 1rem;
     opacity: 0.6;
+}
+.hidden {
+    display: none;
 }
 
 .opacity-high {
@@ -748,7 +754,7 @@ canvas#bottles_canvas {
 
 /* intro illustration */
 .background-illustration {
-    background: url("../img/illustration_screen/full_image.svg") no-repeat;
+    background: url("../img/illustration_screen/oceans_full_image_landscape.png") no-repeat;
     height: 100vh;
     background-color: #32abde;
     background-size: contain;
@@ -772,6 +778,7 @@ canvas#bottles_canvas {
 }
 .img-whale-story {
     max-width: 10rem;
+    max-height: 10rem;
     width: 8vw;
     height: 8vw;
     border: var(--color-highlight) dashed;
