@@ -73,7 +73,7 @@ a {
     color: var(--color-sea);
 }
 a:hover {
-    color: var(--color-highlight);
+    color: var(--color-dark);
     text-decoration: none;
 }
 summary:focus {
@@ -110,7 +110,7 @@ summary:focus {
 }
 .btn-empty:hover {
     background-color: var(--color-highlight);
-    color: var(--color-light);
+    color: #fff;
     border: solid var(--color-highlight);
 }
 .btn-primary {
@@ -118,7 +118,7 @@ summary:focus {
     border: none;
 }
 .btn-primary:hover, btn-primary:active {
-    background-color: var(--color-light);
+    background-color: var(--color-main) !important;
     border: none;
 }
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
@@ -128,21 +128,21 @@ summary:focus {
 .bubble-intro {
     margin: 37vw auto auto 45%;
 }
-.btn-bubble {
+.btn-bubble, .btn-bubble:focus, .btn-bubble:active, .btn-bubble:visited {
     border-bottom-right-radius: 0;
     padding: 1rem 2rem;
     background-color: var(--color-highlight);
     z-index: 9;
     transition: all .15s;
 }
-.btn-bubble:hover, .btn-bubble:focus, .btn-bubble:active, .btn-bubble:visited {
+.btn-bubble:hover {
     background-color: var(--color-main) !important;
     border: none;
 }
-.btn-bubble:hover::after, .btn-bubble:focus::after, .btn-bubble:active::after, .btn-bubble:visited::after {
-    border-bottom: 1rem solid var(--color-main);
+.btn-bubble:hover::after {
+    border-bottom: 1rem solid var(--color-main) !important;
 }
-.btn-bubble::after {
+.btn-bubble::after, .btn-bubble:focus::after, .btn-bubble:active::after, .btn-bubble:visited::after {
     width: 0;
     height: 0;
     position: absolute;
@@ -186,7 +186,6 @@ summary:focus {
     top: 2rem;
     left: -240%;
     margin: auto;
-    z-index: 999;
 }
 .tooltip .tooltiptext-top::after {
     content: "";
@@ -212,7 +211,6 @@ summary:focus {
     top: 6rem;
     right: -100%;
     margin: auto;
-    z-index: 999;
 }
 .tooltip .tooltiptext-bottom::after {
     content: "";
@@ -238,7 +236,6 @@ summary:focus {
     top: 2rem;
     left: 45%;
     margin: auto auto 0 auto;
-    z-index: 999;
 }
 
 .tooltip .tooltiptext-right::after {
@@ -265,7 +262,6 @@ summary:focus {
     top: 2rem;
     right: 100%;
     margin: auto auto 0 auto;
-    z-index: 999;
 }
 .tooltip .tooltiptext-left::after {
     content: "";
@@ -296,18 +292,18 @@ summary:focus {
     background: #4bbee22e;
 }
 .card {
-    background-color: #ecfcfec4;
+    background-color: #ecfcfeeb;
     padding: 2rem;
     box-shadow: 0 0.25rem 0.5rem 0 rgba(0,0,0,0.2);
     border: none;
-    border-radius: 0 0 1rem 1rem;
+    border-radius: 1rem;
 }
 
 .index-mid {
     z-index: 0;
 }
 .index-front {
-    z-index: 10;
+    z-index: 9999;
 }
 .index-back {
     z-index: -40;
@@ -866,7 +862,7 @@ a.info-whale:hover > .img-whale-story {
     left: 20vw;
 }
 .info-sealife {
-    top: 10vw;
+    top: 5vw;
     left: 35vw;
 }
 .info-story-deepdive {
@@ -886,7 +882,7 @@ a.info-whale:hover > .img-whale-story {
     left: 50vw;
 }
 .cloud-1 {
-    top: 35vw;
+    top: 18vw;
     left: 10vw;
     animation: cloud1-anim infinite 110s ease-out;
 }
